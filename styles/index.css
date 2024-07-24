@@ -759,10 +759,7 @@ canvas {
 
 }
 
-.footer-div{
-    margin: 120px 50px 0 50px;
-    padding: 0;
-}
+
 
 
 .footer-area {
@@ -1017,6 +1014,10 @@ nav .fa-solid{
         margin: 0;
     }
 
+    .footer-div{
+        margin: 0;
+        padding: 0;
+    }
    
 
 
