@@ -1,0 +1,766 @@
+/* Sensation Font */
+@font-face {
+    font-family: 'Sansation';
+    src: url('../fonts/Sansation_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* RSMS Font */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/InterVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Times New Roman', Times, serif;
+
+}
+
+
+h1 {
+    font-family: 'Sansation' ;
+    font-size: 46px;
+    letter-spacing: 3px;
+}
+
+.main-container {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+}
+
+
+.erp-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 30px auto;
+    color: #61be7b;
+}
+
+.erp-details, .erp-image {
+    flex: 1;
+    padding: 30px;
+    margin: 30px 0 30px 0;
+}
+.erp-image img {
+    max-width: 100%;
+    height: auto;
+    /* animation: zoomFadeIn 2s ease-in-out forwards 2s infinite; */
+}
+
+
+/* Define the keyframes for the zoom-in and fade-in animation */
+@keyframes zoomFadeIn {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.erp-description{
+    color: black;
+    line-height:2rem;
+
+}
+
+.contact-details{
+    background-color: #61be7b;
+}
+
+
+.detail-div{
+    margin:50px 0px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+form input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: none;
+}
+
+
+select {
+    color: #857d7d;
+    padding: 10px 20px;    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    -webkit-appearance: none; 
+    appearance: none;
+    background-color: white; 
+}
+
+option {
+    color: black; 
+}
+
+:required:focus:not(:valid) {
+    border: 1px solid red;
+
+  }
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #08ba3a;
+}
+
+
+/* Header Starts */
+
+.top-nav,
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.top-nav {
+    background-color: rgba(97, 190, 123, 1);
+}
+
+.main-nav {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: top 0.3s, opacity 0.3s, background-color 0.3s;
+    border-bottom: 1px solid #61be7b;
+}
+
+
+.top-nav ul,
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.top-nav ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #61be7b;
+    transition: width 0.2s ease-in-out;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main-nav ul li a:hover {
+    color: #61be7b;
+}
+
+.top-nav ul li i, .footer-icons ul li i {
+    color: black;
+}
+
+.top-nav ul li i:hover, .footer-icons ul li i:hover {
+    color: white;
+}
+
+.top-nav a,
+.main-nav a {
+    color: #000000;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.main-nav a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-nav ul,
+.main-nav div {
+    margin: 0 50px 0 0px;
+}
+
+.top-nav li,
+.main-nav li {
+    margin: 0px 15px;
+}
+
+.main-nav.scrolled {
+    top: 0;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+  
+   
+}
+
+.stickys {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo img {
+    height: 40%;
+    width: 40%;
+}
+
+/* Header Ends */
+
+
+
+
+.erp-products,
+.contact-us-div {
+
+    margin: 50px 50px;
+}
+
+.services-div h1,.choose-us-div h1,
+.team-div h1,
+.contact-us-div h1 {
+    text-align: center;
+    color: #61be7b;
+    padding-bottom: 20px 0;
+
+}
+
+
+
+.product-content {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); */
+    grid-template-columns: repeat(4, minmax(250px, 300px));
+    row-gap: 10px; 
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+
+}
+
+.product-item {
+    width: 250px;
+    height: 150px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: transform 0.1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-item h4 {
+    font-size: 18px;
+    /* margin-bottom: 5px; */
+    /* color: white; */
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+
+
+}
+
+.product-item h4,
+.product-item img {
+    position: relative;
+    z-index: 2;
+    color: #000000;
+    /* margin-top: 20px; */
+}
+
+
+.product-item .front,
+.product-item .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.9s;
+}
+
+.product-item .front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product-item .back {
+    transform: rotateY(180deg);
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.product-item:hover .front {
+    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg) scale(0.8);
+
+}
+
+.product-item:hover .back {
+    /* transform: rotateY(360deg); */
+    transform: rotateY(360deg) scale(1.1);
+}
+
+
+
+.choose-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-item {
+    margin: 50px;
+    display: flex;
+    width: 300px;
+}
+
+
+.achievements-div
+{
+    background-image: url('../images/bg-new.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    opacity: 0.9;
+}
+
+.achievement-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.count-item {
+    width: 300px;
+}
+
+.count-item h1,
+.plus-icon {
+    display: inline;
+    color: black;
+    color: white;
+    margin: 0 0 0 10px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.count-number {
+    text-align: center;
+}
+
+.count-text {
+    background-color: #61be7b;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.count-text p {
+    color: white;
+}
+
+
+.count {
+    margin: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.team-details {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 300px));
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.team-item img {
+    border-radius: 80px;
+    display: flex;
+}
+
+.team-item h2 {
+    margin: 0;
+    padding: 20px 0 0 0;
+    color: #61be7b;
+}
+
+.team-social-media i {
+    font-size: 20px;
+    margin: 0 10px;
+    color: black;
+
+}
+
+
+.contact-us-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 20px 0;
+    gap: 80px;
+}
+
+.address-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #61be7b;
+    border-radius: 20px;
+}
+
+.address-div div {
+    margin: 10px;
+}
+
+.address-div div h2 {
+    padding: 0;
+    margin: 0;
+    color: #61be7b;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.address-div div p {
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.detail-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-row {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#phoneId,#requirementItem {
+    width: 225px;
+}
+
+#emailId, #companyName {
+    width: 265px;
+}
+
+.requirement-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.requirement-div > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.requirement-div > div:last-child {
+    margin-right: 0;
+}
+  
+.send-button {
+    width: 150px;
+    padding: 10px;
+    background-color: #08ba3a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+
+
+.send-button:hover {
+    /* background-color: #61be7b; */
+    border: 1px solid #08ba3a;
+    transform: scale(1.1);
+}
+
+
+
+.footer-div{
+    margin: 120px 50px 0 50px;
+    padding: 0;
+}
+
+.footer-details{
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    opacity: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #61be7b;
+    border-radius: 5px;
+}
+
+.footer-area {
+    padding: 0 10% 0 10%;
+    color: black;
+    
+}
+
+.footer-area h2 {
+    color: white;
+    font-size: 25px;
+}
+
+
+
+.connect-us {
+    display: flex;
+    justify-content:center;
+    gap: 100px;
+}
+
+.connect-detail {
+    align-items: center;
+    margin-top: 50px;
+}
+
+.connect-input {
+    width: 300px;
+    border: 1px solid #08ba3a;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.connect-btn {
+    padding: 10px;
+    background-color: #08ba3a;
+    color: black;
+    border: 1px solid #61be7b;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 80px;
+    font-size: 14px;
+}
+
+.connect-btn:hover {
+    color: black;
+    background-color: #08ba3a;
+}
+
+.submit-message {
+    margin-top: 10px;
+    display: none;
+    font-size: 16px; 
+}
+
+.more-details {
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.more-details ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-icons {
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-media li {
+    display: inline-block;
+}
+
+.footer-icons ul li i {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.copy-right {
+    margin: 0 0 0 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+/* slide-up animation */
+
+@keyframes slideUp {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(170px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-30px); 
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .service-content, .team-details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .connect-detail, .more-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details div, .more-details ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-row, .requirement-div {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #phoneId,#requirementItem {
+        width: 100%;
+    }
+    
+    #emailId, #companyName {
+        width: 100%;
+    }
+}
+

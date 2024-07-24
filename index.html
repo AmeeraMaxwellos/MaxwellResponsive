@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxwell OS</title>
+    <script src="https://kit.fontawesome.com/36261d1080.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./scripts/particle.js"></script>
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("vQXk3pkgQ1MicEtF3"); // Replace with your EmailJS user ID
+        })();
+    </script>
+
+</head>
+
+<body>
+    <header>
+        
+        <nav class="top-nav">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <a href="#">+974 4020 7520</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:">info@maxwellos.com</a>
+                </li>
+            </ul>
+            <ul class="social-media-list">
+                <li><a href="https://www.instagram.com/maxwell_technology_/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                </li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-square-snapchat"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./images/fullLogoBlack.png" alt="Maxwell OS Logo" width="50" height="50">
+            </div>            
+            <ul id="side-menu">
+                <li><a href="#particles">Home</a></li>
+                <li><a href="#servicesDiv">Services</a></li>
+                <li><a href="#chooseUsDiv">Features</a></li>
+                <li><a href="#teamDiv">Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#contactUs">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closeMenu()"></i>
+
+            </ul>
+
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+
+        </nav>
+        
+    </header>
+
+    <main>
+
+        <div class="main-container">
+
+            <div class="main-bg" id="particles">
+                <!-- We have to add some text on top of the bg image -->
+                 <div class="erp-div">
+
+                    <div>
+                        <div class="erp-heading">
+                            <!-- <img class="erp-logo" src="./images/bluewhite.png" width="400" height="130" alt=""> -->
+                            <img class="erp-logo" src="./images/bluewhiteCrop.png" width="400" height="70" alt="">
+
+                            <!-- <p class="erp-head">ERP Next</p> -->
+                            <p class="erp-desc">Streamline Your Business Operations</p>
+    
+                        </div>
+                        <div class="erp-consultation">
+                            <a href="./video/video.mp4" class="erp-play-button">
+                                <!-- <button class="erp-play-button">
+                                    &#9658; 
+                                </button> -->
+                                <i class="fa-solid fa-play"></i>                            
+                            </a>
+                            <a href="#contactUs" class="consultation-text">Get a free Consultation..?</a>     
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="erp-content">
+                        <p>Accounting</p>
+                        <p>Human Resource</p>
+                        <p>CRM</p>
+                        <p>Inventory Management</p>
+                        <p>Sales and  Purchasing</p>
+                        <p>Project Management</p>
+                        <p>Manufacturing</p>
+                        <p>Healthcare</p>
+                        <p>Education</p>
+                        <p>Non-Profit</p>
+
+                    </div>
+                   
+
+                 </div> 
+            </div>
+
+            <div class="main-content">
+
+                <div id="servicesDiv" class="services-div">
+                    <h1>Our Services</h1>
+                    <div class="service-content">
+                        <div class="service-item" id="erpNextPage">
+                            <!-- <img src="./images/ERPicon.jpg" height="80" width="80" alt=""> -->
+                            <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <!-- <i class="fa-sharp-duotone fa-solid fa-cubes"></i> -->
+                                    <i class="fa-solid fa-diagram-project"></i>
+                                </div>
+                             </div>
+                            <h4>ERP Next</h4>
+                            <p>Our ERP system is designed to streamline and automate your business processes. It provides a suite of integrated applications that manage various business functions, including accounting, inventory, sales, purchasing, HR, and more.</p>
+                        </div>
+        
+                        <div class="service-item">
+                            <!-- <img src="./images/web3.webp" height="80" width="80" alt=""> -->
+                             <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <i class="fa-solid fa-code"></i>
+
+                                </div>
+                             </div>
+                            <h4>Web Development</h4>
+                            <p>We offer a comprehensive range of web development features designed to create dynamic, responsive, and user-friendly websites. We create visually appealing and intuitive user interfaces that enhance user experience.</p>
+                        </div>
+        
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <i class="fa-brands fa-google-play"></i>                                
+                                </div>
+                             </div>
+                            <h4>App Development</h4>
+                            <p>We create custom mobile applications designed specifically for your business requirements. Our apps are developed to work seamlessly across multiple platforms, including iOS, Android, and web, providing a consistent experience for all users.</p>
+                        </div>
+
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
+                                </div>
+                             </div>
+                            <h4>E-Commerce</h4>
+                            <p>we specialize in creating robust and scalable e-commerce solutions that help you drive sales and grow your online business. Integration with multiple payment gateways to offer secure and convenient payment options for your customers.</p>
+                        </div>
+        
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <!-- <i class="fa-solid fa-robot"></i>                                 -->
+                                    <i class="fa-solid fa-comment-dollar"></i>
+                                </div>
+                             </div>
+                            <h4>Digital Marketing</h4>
+                            <p>we offer a full suite of digital marketing services designed to elevate your online presence, drive traffic, and convert leads into loyal customers. Our data-driven approach ensures that your marketing efforts are targeted, effective, and aligned with your business goals.</p>
+                        </div>
+        
+                        
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                             </div>
+                            <h4>Branding</h4>
+                            <p>We understand your target audience, market trends, and competitors to develop a strategic branding plan. Maintain consistent branding across all touchpoints, actively engage with your audience to build relationships and reinforce your brand’s presence.</p>
+                        </div>
+        
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                </div>
+                             </div>
+                            <h4>PRO Services</h4>
+                            <p>Our PRO Services are designed to provide top-tier, professional solutions that drive success and deliver exceptional results. Our expert team offers a range of specialized services tailored to meet the unique needs of your business and help you achieve your goals.</p>
+                        </div>
+        
+                        <div class="service-item">
+
+                               <div class="service-icon">
+                                <div class="service-icon-child">
+                                    <!-- <i class="fa-sharp-duotone fa-solid fa-cubes"></i> -->
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                             </div>
+                            <h4>SEO</h4>
+                            <p>Our SEO services are designed to boost your website’s visibility, attract more organic traffic, and improve your search engine rankings. Optimize individual web pages to rank higher and attract more relevant traffic. This includes optimizing meta tags, headings, content, and images.</p>
+                        </div>
+    
+
+                    </div>
+    
+
+                </div>
+
+                <div id="chooseUsDiv" class="choose-us-div">
+                    <h1>Why Choose Us</h1>
+
+                    <div class="choose-us-content">
+                        <div class="left-area">
+
+                            <div class="choose-item">
+
+                                <div class="chose-detail">
+                                    <h4>Experienced</h4>
+                                    <p>We’ve consistently delivered high-quality solutions ensuring our clients’ objectives are met with precision and excellence.</p>
+                                </div>
+
+                                <div class="chose-icon">
+                                    <img src="./images/experienceicon.png"  height="80" width="80" alt="">
+                                </div>
+
+                            </div>
+
+                            <div class="choose-item">
+
+                                <div class="chose-detail">
+                                    <h4>Fast Delivery</h4>
+                                    <p>Our streamlined processes and agile methodologies ensure that your projects are completed quickly. </p>
+                                </div>
+
+                                <div class="chose-icon">
+                                    <img src="./images/delivery.webp"  height="100" width="100" alt="">
+                                </div>
+
+                            </div>
+
+                            <div class="choose-item">
+
+                                <div class="chose-detail">
+                                    <h4>100% Satisfaction </h4>
+                                    <p>We place our clients at the heart of everything we do, ensuring that their needs and expectations are fully understood and met. </p>
+                                </div>
+
+                                <div class="chose-icon">
+                                    <img src="./images/satisfaction.png"  height="100" width="80" alt="">
+                                </div>
+
+                            </div>
+
+                         
+                           
+                        </div>
+    
+    
+                        <div class="middle-area">
+                            <img src="./images/choose2.webp" height="400" width="400" alt="">
+                        </div>
+    
+                        <div class="rightt-area">
+
+                            <div class="choose-item">
+                                <div class="chose-icon">
+                                    <img src="./images/onestop.png"  height="80" width="80" alt="">
+                                </div>
+                                <div class="chose-detail">
+                                    <h4>One Stop Solution</h4>
+                                    <p>we offer a one-stop solution for all your web development needs. From initial concept to final deployment </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="choose-item">
+                                <div class="chose-icon">
+                                    <img src="./images/pricing.png"  height="80" width="80" alt="">
+                                </div>
+                                <div class="chose-detail">
+                                    <h4>Pricing</h4>
+                                    <p>We pride ourselves on transparency. Our quotes are comprehensive and include all costs, so you won’t encounter any surprises down the line.</p>
+                                </div>
+
+                                
+
+                            </div>
+
+                            <div class="choose-item">
+
+                                <div class="chose-icon">
+                                    <img src="./images/response.png"  height="80" width="80" alt="">
+                                </div>
+
+                                <div class="chose-detail">
+                                    <h4>24/7 Response </h4>
+                                    <p>Our dedicated support team is available around the clock, ready to assist you with any questions or issues that may arise, day or night.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="achievemetsDiv" class="achievements-div">
+
+                    <div class="achievement-details">
+                            <div class="count-item" id="count-item-1">
+                                <div class="count-number">
+                                    <h1 class="count">1</h1>
+                                    <p class="plus-icon">+</p>
+        
+                                </div> 
+                                <div class="count-text">
+                                    <p>HAPPY CUSTOMERS</p>
+                                </div>
+                            </div>
+        
+                            <div class="count-item" id="count-item-2">
+                                <div class="count-number">
+                                    <h1 class="count">1</h1> 
+                                    <p class="plus-icon">+</p>
+                                </div>
+                                <div class="count-text">
+                                    <p>YEARS EXPERIENCE</p>
+                                </div>
+                            </div>
+        
+                            <div class="count-item" id="count-item-3">
+                                <div class="count-number">
+                                    <h1 class="count">1</h1>
+                                    <p class="plus-icon">+</p>
+        
+                                </div>
+                                <div class="count-text">
+                                    <p>EMPLOYEES</p>
+                                </div>
+                            </div>
+        
+                            <div class="count-item" id="count-item-4">
+                                <div class="count-number">
+                                    <h1 class="count">1</h1>
+                                </div>
+                                <div class="count-text">
+                                    <p>BRANCHES</p>
+                                </div>
+                            </div>
+        
+        
+        
+                    </div>
+
+                </div>
+
+                <div id="teamDiv" class="team-div">
+                    <h1>Our Team</h1>
+                    <div class="team-details">
+
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                        
+                        <div class="team-item">
+                            <img src="./images/girlImg.jpg" width="150" height="150" alt="">
+                            <h2>Aleena Rose</h2>
+                            <p>Web Developer</p>
+                            <div class="team-social-media">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <i class="fa-brands fa-square-facebook"></i>                         
+                            </div>
+
+                        </div>
+                    
+
+                    </div>
+
+                </div>
+
+                <div id="contactUs" class="contact-us-div">
+                    <h1>Contact Us</h1>
+                
+                    <div class="contact-details">
+                        <div class="address-div">
+                            <div>
+                                <h2>Address</h2>
+                                <p>Near National Museum , 
+                                    Building No:08 <br>
+                                    Ground Floor , Office No:2 <br> 
+                                    MKM Tower , Doha
+                                </p>
+                            </div>
+                            <div>
+                                <h2>Phone</h2>
+                                <p>+974 3030 5266 , 
+                                    +974 4020 7520
+
+                                </p>
+                            </div>
+                            <div>
+                                <h2>Email</h2>
+                                <p>info@maxwellos.com ,
+                                    accounts@maxwellos.com</p>
+                            </div>
+                        </div>
+                
+                        <div class="detail-div">
+                            <form id="contactForm">
+                                <div>
+                                    <input type="text" id="name" name="name" placeholder="Name *"  required>
+                                </div>
+                               
+                                <div class="contact-row">
+                                    <div>
+                                        <input id="emailId" type="email" name="email" placeholder="Email *" required>
+
+                                    </div>
+                                       
+                                    <div class="phone-container">
+                                        <input  id="phoneId" type="tel" name="phone" placeholder="Phone *" required>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="requirement-div">
+                                    <div class="company-name">
+                                        <input type="text" id="companyName" name="companyName" placeholder="Company Name" >
+                                    </div>
+
+                                    <div class="requirement-item">
+                                        <select name="requirementType" id="requirementItem"  required>
+                                            <option value="" selected disabled>Select *</option>
+                                            <option value="type1">ERP</option>
+                                            <option value="type2">Web Development</option>
+                                            <option value="type3">App Development</option>
+                                            <option value="type4">Digital Marketing</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                                <input type="text" name="subject" placeholder="Subject *" required>
+                                <textarea name="message" rows="5" placeholder="Your message *" required></textarea>
+                                <button class="send-button" type="submit">Send Message</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div> 
+
+    </main>
+
+    <footer>
+        <div class="footer-div">
+            
+            <div class="footer-details">
+                
+
+                <div class="footer-area">
+
+
+                        <div class="connect-us">
+                            <div>
+                                <h2>Stay in touch</h2>
+                            <p>Be the first to know about novelties and offers.</p>
+
+                            </div>
+                            
+                            <div class="connect-container">
+                                <div class="connect-detail">
+                                    <input type="email" placeholder="Email address" class="connect-input" required>
+                                    <button class="connect-btn">Go!</button>
+                                </div>
+
+                                <div class="submit-message"></div>
+
+                            </div>
+                        </div>
+
+                        <div class="more-details">
+                            <ul>
+                                <li><h2>About Us</h2></li>
+                                <li>Software Development</li>
+                                <li>App Development</li>
+                                <li>E-commerce</li>
+                                <li>Digital Marketing</li>
+                                <li>ERP</li>
+
+                            </ul>
+            
+                            <ul>
+                                <li><h2>Help Center</h2></li>
+                                <li>FAQ</li>
+                                <li>Contact Us</li>
+            
+                            </ul>
+            
+                            <ul>
+                                <li><h2>Services</h2></li>
+                                <li>Installment Plan</li>
+                                <li>Personal Setup</li>
+                                <li>Demo sessions and workshop</li>
+                                <li>MaxCare</li>
+            
+            
+                            </ul>
+            
+                            <ul>
+                                <li><h2>Legal</h2></li>
+                                <li>Returns & Replacement</li>
+                                <li>Terms and Conditions</li>
+                                <li>Privacy and Policy</li>
+            
+                            </ul>
+            
+            
+                        </div>
+                    
+                        <div class="footer-icons">
+                            <ul class="footer-social-media">
+                                <li><a href="https://www.instagram.com/maxwell_technology_/" target="_blank">
+                                    <i class="fa-brands fa-square-instagram"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa-brands fa-square-snapchat"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+
+                </div>
+        
+
+            </div>
+            <div class="copy-right">
+                <p>Copyright 2024 © Maxwell Online Services.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    
+    
+    <script>
+        document.getElementById("erpNextPage").addEventListener("click", function() {
+          window.location.href = "erp.html";
+        });
+    </script>
+
+    <script>
+ 
+    $(document).ready(function() {
+            $('#contactForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                var formData = {
+                    name: $('#name').val(),
+                    email: $('#emailId').val(),
+                    phone: $('#phoneId').val(),
+                    companyName: $('#companyName').val(),
+                    requirementType: $('#requirementItem option:selected').text(),
+                    subject: $('input[name="subject"]').val(),
+                    message: $('textarea[name="message"]').val()
+                };
+
+                var emailSubject = formData.subject + " - " + formData.requirementType;
+
+                var templateParams = {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    company_name: formData.companyName,
+                    requirement_type: formData.requirementType,
+                    subject: emailSubject,
+                    message: formData.message
+                };
+
+                console.log("Sending email with params:", templateParams);
+
+                emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
+                    .then(function(response) {
+                        console.log('Email sent successfully:', response);
+                        alert('Your message has been sent successfully!');
+                    }, function(error) {
+                        console.error('Failed to send email:', error);
+                        alert('There was an error sending your message.');
+                    });
+            });
+        });
+    </script>
+
+    <script src="./scripts/index.js"></script>
+
+
+</body>
+</html>
