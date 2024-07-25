@@ -185,11 +185,27 @@ textarea:focus {
    
 }
 
+
+nav .fa-solid{
+    display: none;
+    color: black;
+
+}
+
+/* 
 .stickys {
     position: fixed;
     top: 0;
     z-index: 1000;
+} */
+
+
+.logo img {
+    height: 40%;
+    width: 40%;
 }
+
+
 
 /* Header Ends */
 
@@ -214,7 +230,12 @@ canvas {
     z-index: -1; 
     height: 100%;
     width: 100%;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
 }
+
+
 
 .erp-div{
     position: relative;
@@ -241,10 +262,6 @@ canvas {
     font-size: 20px;
 } 
     
-.erp-heading{
-    /* animation: fadeIn 0s ease-in-out 1s infinite, zoomIn 2s ease-in-out 5s infinite; */
-}
-
 .erp-content {
     text-align: center; 
     margin: 100px 150px  100px 100px;
@@ -320,10 +337,6 @@ canvas {
     color: black;
 }
 
-.logo img {
-    height: 40%;
-    width: 40%;
-}
 
 
 .services-div,.choose-us-div,
@@ -344,11 +357,6 @@ canvas {
 
 }
 
-.choose-us-div h1{
-    margin: 0 0 0px 0;
-
-
-}
 
 .services-div h1{
     margin: 30px 0 50px 0;
@@ -490,6 +498,11 @@ canvas {
 }
 
 
+.choose-us-div h1{
+    margin: 0 0 0px 0;
+}
+
+
 .choose-us-content {
     display: flex;
     align-items: center;
@@ -510,6 +523,7 @@ canvas {
 .choose-item h4, .choose-item p {
    margin: 5px;
 }
+
 
 
 
@@ -754,9 +768,6 @@ canvas {
     box-sizing: border-box;
     background-color: #61be7b;
     border-radius: 5px;
-
-
-
 }
 
 
@@ -888,15 +899,11 @@ canvas {
 
 
 
-nav .fa-solid{
-    display: none;
-    color: black;
-
-}
-
-
 
 @media (max-width: 768px) {
+
+/* Navbar media query starts */
+
     .main-nav{
         top: 0;
     }
@@ -904,6 +911,7 @@ nav .fa-solid{
     .top-nav{
         display: none;
     }
+
     .main-nav .fa-solid{
         display: block;
         font-size: 20px;
@@ -911,6 +919,7 @@ nav .fa-solid{
         padding-right: 10px;
 
     }
+
     .main-nav ul {
         background-color: #61be7b;
         position: fixed;
@@ -924,12 +933,11 @@ nav .fa-solid{
         transition: right 0.5s;
     }
 
-
     .main-nav ul li{
         display: block;
         padding: 10px;
         font-size: 30px;
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .main-nav ul i {
@@ -953,6 +961,7 @@ nav .fa-solid{
         transition: 0.5s; 
     
     }
+
     .main-nav ul li a:hover::after{
         width: 100%;
     
@@ -963,13 +972,82 @@ nav .fa-solid{
 
     }
 
-    .choose-us-div{
-        display: none;
+
+/* Navbar media query starts */
+
+    .erp-head-div{
+        width: 300px;
+        margin: 20% 20% 20% 20%;
+        text-align: center;    
+    
     }
 
+    .choose-us-div{
+        /* display: none; */
+    }
+
+
+    .choose-us-content {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .choose-item {
+        width: 100%; 
+        margin: 50px 0;
+    }
+
+    .middle-area img {
+        width: 100%; /* Make the middle image full width */
+        height: auto;
+    }
+
+
+    
+
+    .contact-us-div{
+        margin:50px 20px 20px 20px;
+
+    }
+
+    .contact-details {
+        flex-direction: column-reverse;
+        margin: 10px 0;
+    }
+
+    .contact-us-div h1 {
+        margin-bottom: 0px;
+    }
+
+    .address-div, .detail-div {
+        width: 100%;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        /* padding: 10px; */
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    
+    .requirement-div > div {
+        /* flex: 1; */
+        /* margin-right: 10px; */
+    }
    
+
+    .send-button {
+        display: block;
+        margin: 10px auto 0;
+        padding: 10px 20px;
+    }
+
     .footer-area {
         padding: 0 5%;
+    }
+
+    .footer-details{
+        border-radius:0px;
+
     }
 
     .connect-us {
@@ -997,6 +1075,64 @@ nav .fa-solid{
         margin: 10px 0;
     }
 
+
+    form input, textarea, select, button {
+        margin: 10px 0 0px 0;
+    }
+    
+    .requirement-div div{
+        width: 100%;
+    }
+    .requirement-div{
+        align-items: start;
+    }
+
+    .contact-details{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .more-details ul li {
+        width: 100%;
+        margin: 0px 0;
+
+    }
+
+    .address-div div{
+        padding:10px;
+    }
+
+    .contact-row, .requirement-div {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .email-container {
+        margin-bottom:10px ;
+    }
+
+    #phoneId,#requirementItem {
+        width: 100%;
+    }
+    
+    #emailId, #companyName {
+        width: 100%;
+    }
+
+
+    .phone-container .iti {
+        width: 100%;
+    }
+    
+    .phone-container .iti__flag-container {
+        padding: 10px 0;
+    }
+    
+    .phone-container input {
+        padding-left: 50px; /* Adjust this value based on your design */
+    }
+
     
     .footer-social-media li {
         display: inline-block;
@@ -1019,41 +1155,111 @@ nav .fa-solid{
         padding: 0;
     }
    
-
+    .services-div{
+        margin: 5px 10px;
+    }
 
 
     .service-content, .team-details {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .contact-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .connect-detail {
         flex-direction: column;
         align-items: center;
+        margin-top: 0;
+
     }
 
-    .contact-details div, .more-details ul li {
-        width: 100%;
-        margin: 10px 0;
+
+
+
+    /* .main-bg {
+       
+        background-image: url('../images/mobilebg.jpg');
+       
+    } */
+
+    .main-bg {
+        justify-content: center; /* Centered on smaller screens */
+        /* padding-right: 20px;  */
     }
 
-    .contact-row, .requirement-div {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
+    .erp-div {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items on smaller screens */
+        margin-top: 50px; /* Adjusted margin for smaller screens */
+        /* margin-right: 0;  */
+        padding: 20px; /* Added padding for spacing */
+        box-sizing: border-box;
+        width: 100%; /* Full width on smaller screens */
     }
 
-    #phoneId,#requirementItem {
-        width: 100%;
+    .erp-logo {
+        width: 100%; 
+        /* max-width: 100px; 
+        max-height: 200px; */
+        margin-bottom: 20px; 
+        /* display: none; */
     }
-    
-    #emailId, #companyName {
-        width: 100%;
+
+    .erp-desc {
+        padding: 0 20px; 
+        width: 100%; /* Full width on smaller screens */
+        font-size: 18px; 
     }
+
+    .erp-content {
+        /* margin: 20px 0;  */
+        height: auto;
+        width: 100%; 
+        display: none;
+    }
+
+    .erp-content p {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        position: static;
+        /* transform: none;  */
+        /* animation: none;  */
+        color: black;
+        padding: 10px;
+        font-weight: bold;
+        line-height: 1.6rem;
+    }
+
+    .erp-content p.show {
+        display: block;
+    }
+
+    .erp-consultation {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-top: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    .erp-play-button i {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+        width: 50px; /* Adjusted size for smaller screens */
+        height: 50px; /* Adjusted size for smaller screens */
+        margin-bottom: 10px; /* Added bottom margin for spacing */
+    }
+
+    .erp-consultation a {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        margin-top: 10px; /* Added top margin for spacing */
+    }
+
+    /* canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    } */
+
+
+
 }
 
 @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
