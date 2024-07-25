@@ -1111,6 +1111,7 @@ textarea:focus {
     
     
     }
+   
     
 @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
@@ -1122,3 +1123,195 @@ textarea:focus {
         
             
 }
+
+
+@media (min-width: 600px) and (max-width: 900px) 
+
+
+{
+    
+    .main-nav{
+        top: 0;
+    }
+
+    .top-nav{
+        display: none;
+    }
+
+    .main-nav .fa-solid{
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        padding-right: 10px;
+
+    }
+
+    .main-nav ul {
+        background-color: #61be7b;
+        position: fixed;
+        top: 0;
+        /* right: 0; */
+        display: block;
+        right:-250px; /*this will hide menu bar by default*/
+        width: 200px;
+        height: 100vh;
+        z-index: 2;  /*Nav bar in small screens*/
+        transition: right 0.5s;
+    }
+
+    .main-nav ul li{
+        display: block;
+        padding: 10px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .main-nav ul i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        margin: 0;
+
+
+    }
+
+    .main-nav ul li a::after{
+
+        content: ' ';
+        width:  0;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: -6px; 
+        transition: 0.5s; 
+    
+    }
+
+    .main-nav ul li a:hover::after{
+        width: 100%;
+    
+    }
+
+    .main-nav ul li a:hover{
+        color: white;
+
+    }
+
+    .erp-main{
+        margin-top: 100px;
+    }
+
+    
+    .erp-div {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items on smaller screens */
+        margin-top: 150px; /* Adjusted margin for smaller screens */
+        /* margin-right: 0;  */
+        padding: 20px; /* Added padding for spacing */
+        box-sizing: border-box;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .erp-logo {
+        width: 100%; 
+        /* max-width: 100px; 
+        max-height: 200px; */
+        margin-bottom: 20px; 
+        /* display: none; */
+    }
+
+    .erp-desc {
+        padding: 0 20px; 
+        width: 100%; /* Full width on smaller screens */
+        font-size: 18px; 
+    }
+
+    .erp-details, .erp-image {
+        flex: 1;
+        padding: 10px 30px 0 30px;
+        margin: 30px 0 0px 0;
+    }
+
+    .product-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-item {
+        width:auto;
+    }
+
+    .service-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .choose-item{
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+    }
+
+    .middle-area img{
+        height: 390px;
+        width: 350px;
+    }
+
+    .contact-us-div{
+        margin:50px 20px 20px 20px;
+
+    }
+    .contact-us-div h1 {
+        margin-bottom: 10px;
+    }
+    .address-div div {
+        margin: 20px 0;
+    }
+    .address-div, .detail-div {
+        width: 100%;
+    }
+    
+
+    .footer-div{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .contact-details {
+        flex-direction: column-reverse;
+        margin: 10px 0;
+        width: 100%;
+        gap: 20px;
+
+
+    }
+
+
+
+    .footer-details{
+        border-radius:0px;
+
+    }
+
+    .connect-us {
+        display: block;
+        text-align: center;
+    }
+
+    .connect-input{
+        width:auto;
+    }
+
+    .connect-btn {
+        width: 60px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+}
+
