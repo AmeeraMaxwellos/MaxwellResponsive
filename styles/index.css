@@ -982,11 +982,6 @@ canvas {
     
     }
 
-    .choose-us-div{
-        /* display: none; */
-    }
-
-
     .choose-us-content {
         flex-direction: column; /* Stack items vertically */
     }
