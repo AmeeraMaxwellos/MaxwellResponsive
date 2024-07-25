@@ -1177,6 +1177,7 @@ canvas {
     } */
 
     .main-bg {
+        background-image: url('../images/mobilebg.jpg');
         justify-content: center; /* Centered on smaller screens */
         /* padding-right: 20px;  */
     }
