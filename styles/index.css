@@ -983,7 +983,7 @@ canvas {
     }
 
     .choose-us-content {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
     }
 
     .choose-item {
@@ -992,7 +992,7 @@ canvas {
     }
 
     .middle-area img {
-        width: 100%; /* Make the middle image full width */
+        width: 100%; 
         height: auto;
     }
 
