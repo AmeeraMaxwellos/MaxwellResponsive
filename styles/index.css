@@ -1277,9 +1277,10 @@ canvas {
     
 }
 
+/* @media (min-width: 600px) and (max-width: 900px)  */
 
 
-@media (min-width: 600px) and (max-width: 900px) 
+@media (min-width: 769px) and (max-width: 1200px) 
 
 
 {
