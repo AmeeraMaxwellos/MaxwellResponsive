@@ -172,3 +172,20 @@ $(document).ready(function() {
 
 
     
+    var sideMenu = document.getElementById('side-menu');
+
+    function openMenu(){
+        console.log('opentab')
+        sideMenu.style.right= '-50px';
+
+    }
+
+
+    function closeMenu(){
+        console.log('close tab')
+        sideMenu.style.right= '-250px';
+
+    }
+
+
+    

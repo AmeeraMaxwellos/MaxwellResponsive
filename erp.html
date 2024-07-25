@@ -57,15 +57,19 @@
             <div class="logo">
                 <img src="./images/fullLogoBlack.png" alt="Maxwell OS Logo" width="50" height="50">
             </div>            
-            <ul>
+            <ul id="side-menu">
                 <li><a href="#" id="homePage">Home</a></li>
                 <li><a href="#servicesDiv">Services</a></li>
                 <li><a href="#chooseUsDiv">Features</a></li>
                 <li><a href="#achievemetsDiv">Product</a></li>
                 <li><a href="#teamDiv">Careers</a></li>
                 <li><a href="#contactUs">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closeMenu()"></i>
+
 
             </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+
         </nav>
         
     </header>
@@ -250,7 +254,7 @@
                                 </div>
                                
                                 <div class="contact-row">
-                                    <div>
+                                    <div class="email-container">
                                         <input id="emailId" type="email" name="email" placeholder="Email *" required>
 
                                     </div>

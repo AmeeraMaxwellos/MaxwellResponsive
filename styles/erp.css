@@ -36,6 +36,12 @@ h1 {
 
 }
 
+nav .fa-solid{
+    display: none;
+    color: black;
+
+}
+
 
 .erp-main {
     display: flex;
@@ -729,38 +735,390 @@ textarea:focus {
 }
 
 
+
 @media (max-width: 768px) {
-    .service-content, .team-details {
-        grid-template-columns: repeat(1, 1fr);
-    }
 
-    .contact-details {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .connect-detail, .more-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-details div, .more-details ul li {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .contact-row, .requirement-div {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    #phoneId,#requirementItem {
-        width: 100%;
+    /* Navbar media query starts */
+    
+        .main-nav{
+            top: 0;
+        }
+    
+        .top-nav{
+            display: none;
+        }
+    
+        .main-nav .fa-solid{
+            display: block;
+            font-size: 20px;
+            cursor: pointer;
+            padding-right: 10px;
+    
+        }
+    
+        .main-nav ul {
+            background-color: #61be7b;
+            position: fixed;
+            top: 0;
+            /* right: 0; */
+            display: block;
+            right:-250px; /*this will hide menu bar by default*/
+            width: 200px;
+            height: 100vh;
+            z-index: 2;  /*Nav bar in small screens*/
+            transition: right 0.5s;
+        }
+    
+        .main-nav ul li{
+            display: block;
+            padding: 10px;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    
+        .main-nav ul i {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            margin: 0;
+    
+    
+        }
+    
+        .main-nav ul li a::after{
+    
+            content: ' ';
+            width:  0;
+            height: 3px;
+            background: white;
+            position: absolute;
+            left: 0;
+            bottom: -6px; 
+            transition: 0.5s; 
+        
+        }
+    
+        .main-nav ul li a:hover::after{
+            width: 100%;
+        
+        }
+    
+        .main-nav ul li a:hover{
+            color: white;
+    
+        }
+    
+    
+    /* Navbar media query starts */
+    
+        .erp-head-div{
+            width: 300px;
+            margin: 20% 20% 20% 20%;
+            text-align: center;    
+        
+        }
+    
+        .choose-us-content {
+            flex-direction: column; 
+        }
+    
+        .choose-item {
+            width: 100%; 
+            margin: 50px 0;
+        }
+    
+        .middle-area img {
+            width: 100%; 
+            height: auto;
+        }
+    
+    
+        
+    
+        .contact-us-div{
+            margin:50px 20px 20px 20px;
+    
+        }
+    
+        .contact-details {
+            flex-direction: column-reverse;
+            margin: 10px 0;
+        }
+    
+        .contact-us-div h1 {
+            margin-bottom: 0px;
+        }
+    
+        .address-div, .detail-div {
+            width: 100%;
+        }
+    
+        input, select, textarea {
+            width: 100%;
+            /* padding: 10px; */
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .requirement-div > div {
+            /* flex: 1; */
+            /* margin-right: 10px; */
+        }
+       
+    
+        .send-button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 10px 20px;
+        }
+    
+        .footer-area {
+            padding: 0 5%;
+        }
+    
+        .footer-details{
+            border-radius:0px;
+    
+        }
+    
+        .connect-us {
+            display: block;
+            text-align: center;
+        }
+    
+        .connect-input{
+            width:auto;
+        }
+    
+        .connect-btn {
+         
+            width: 60px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    
+        .more-details {
+            display: flex;
+           flex-direction: column;
+        }
+    
+        .more-details ul {
+            margin: 10px 0;
+        }
+        
+        form{
+            width: 90%;
+        }
+    
+        form input, textarea, select, button {
+            margin: 10px 0 0px 0;
+        }
+        
+        .requirement-div div{
+            width: 100%;
+        }
+        .requirement-div{
+            align-items: start;
+        }
+    
+        .contact-details{
+            width: 100%;
+            gap: 20px;
+        }
+    
+        .more-details ul li {
+            width: 100%;
+            margin: 0px 0;
+    
+        }
+    
+        .address-div div{
+            padding:10px;
+        }
+    
+        .contact-row, .requirement-div {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+    
+        .email-container {
+            margin-bottom:10px ;
+        }
+    
+        #phoneId,#requirementItem {
+            width: 100%;
+        }
+        
+        #emailId, #companyName {
+            width: 100%;
+        }
+    
+    
+        .phone-container .iti {
+            width: 100%;
+        }
+        
+        .phone-container .iti__flag-container {
+            padding: 10px 0;
+        }
+        
+        .phone-container input {
+            padding-left: 50px; /* Adjust this value based on your design */
+        }
+    
+        
+        .footer-social-media li {
+            display: inline-block;
+            
+        }
+        
+        .footer-icons ul li i {
+            font-size: 14px;
+            margin: 2px;
+        }
+    
+        .more-details h2 {
+            color: white;
+            font-size: 20px;
+            margin: 0;
+        }
+    
+        .footer-div{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .services-div{
+            margin: 5px 10px;
+        }
+    
+    
+        .service-content, .team-details, .product-content {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    
+        .connect-detail {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+    
+        }
+    
+        /* .main-bg {
+           
+            background-image: url('../images/mobilebg.jpg');
+           
+        } */
+    
+        .main-bg {
+            justify-content: center; 
+            /* padding-right: 20px;  */
+        }
+    
+        .erp-div {
+            flex-direction: column; 
+            align-items: center; 
+            margin-top: 50px; 
+            /* margin-right: 0;  */
+            padding: 20px; 
+            box-sizing: border-box;
+            width: 100%; 
+        }
+    
+        .erp-logo {
+            width: 100%; 
+            /* max-width: 100px; 
+            max-height: 200px; */
+            margin-bottom: 20px; 
+            /* display: none; */
+        }
+    
+        .erp-desc {
+            padding: 0 20px; 
+            width: 100%; 
+            font-size: 18px; 
+        }
+    
+        .erp-content {
+            /* margin: 20px 0;  */
+            height: auto;
+            width: 100%; 
+            display: none;
+        }
+    
+        .erp-content p {
+            width: 100%; 
+            font-size: 20px; 
+            position: static;
+            /* transform: none;  */
+            /* animation: none;  */
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+            line-height: 1.6rem;
+        }
+    
+        .erp-content p.show {
+            display: block;
+        }
+    
+        .erp-consultation {
+            flex-direction: column; 
+            align-items: center;
+            margin-top: 20px; 
+        }
+    
+        .erp-play-button i {
+            font-size: 24px; 
+            width: 50px; 
+            height: 50px; 
+            margin-bottom: 10px; 
+        }
+    
+        .erp-consultation a {
+            font-size: 14px; 
+            margin-top: 10px; 
+        }
+    
+        /* canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        } */
+        .erp-main {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .erp-details, .erp-image {
+            margin: 0;
+            /* padding: 10px 0; */
+            padding: 30px 20px;
+        }
+    
+        .erp-details {
+            text-align: left;
+        }
+    
+        .erp-image img {
+            display: block;
+            margin: 0 auto;
+        }
+    
+    
     }
     
-    #emailId, #companyName {
-        width: 100%;
-    }
-}
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
+    
+    .erp-div{
+        
+        margin-top: 20%;
+    }
+        
+            
+}
