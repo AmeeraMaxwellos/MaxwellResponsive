@@ -1307,7 +1307,7 @@ canvas {
         top: 0;
         /* right: 0; */
         display: block;
-        right:-250px; /*this will hide menu bar by default*/
+        right:-250px; 
         width: 200px;
         height: 100vh;
         z-index: 2;  /*Nav bar in small screens*/

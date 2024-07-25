@@ -182,10 +182,13 @@ $(document).ready(function() {
 
 
     function closeMenu(){
-        console.log('close tab')
-        sideMenu.style.right= '-250px';
-
+        console.log('close tab');
+        document.getElementById('side-menu').style.right = '-250px';
     }
 
+    // Add event listener to each <li> element
+    document.querySelectorAll('#side-menu li').forEach(item => {
+        item.addEventListener('click', closeMenu);
+    });
 
     
