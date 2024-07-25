@@ -1349,7 +1349,7 @@ canvas {
     .erp-div {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items on smaller screens */
-        margin-top: 100px; /* Adjusted margin for smaller screens */
+        margin-top: 150px; /* Adjusted margin for smaller screens */
         /* margin-right: 0;  */
         padding: 20px; /* Added padding for spacing */
         box-sizing: border-box;
