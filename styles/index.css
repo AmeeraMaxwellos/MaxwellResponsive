@@ -1178,7 +1178,9 @@ canvas {
 
     .main-bg {
         background-image: url('../images/mobilebg.jpg');
-        justify-content: center; /* Centered on smaller screens */
+        min-height: 100vh;
+        min-width: 100px; /*remove if not working*/
+        justify-content: center; 
         /* padding-right: 20px;  */
         background-size: cover;
         background-attachment: scroll;
