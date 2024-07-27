@@ -524,9 +524,6 @@ canvas {
    margin: 5px;
 }
 
-
-
-
 .achievements-div
 {
     background-image: url('../images/bg-new.webp');
@@ -1252,8 +1249,8 @@ canvas {
         font-size: 14px; /* Adjusted font size for smaller screens */
         margin-top: 10px; /* Added top margin for spacing */
     }
-
-    /* canvas{
+/* 
+    canvas{
         position: absolute;
         top: 0;
         left: 0;
