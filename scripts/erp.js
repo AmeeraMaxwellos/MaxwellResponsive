@@ -161,10 +161,15 @@ $(document).ready(function() {
 
 
     //redirecting to HOME page starts
+
+    const ids = ["main-logo", "homePage"];
+
+        ids.forEach(function(id) {
+        document.getElementById(id).addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+        });
     
-    document.getElementById("homePage").addEventListener("click", function() {
-      window.location.href = "index.html";
-    });
 
     //redirecting to HOME page ends
 
