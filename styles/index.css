@@ -1022,12 +1022,12 @@ canvas {
         margin-bottom: 10px;
         box-sizing: border-box;
     }
-    
+/*     
     .requirement-div > div {
-        /* flex: 1; */
-        /* margin-right: 10px; */
+        flex: 1;
+        margin-right: 10px;
     }
-   
+    */
 
     .send-button {
         display: block;
