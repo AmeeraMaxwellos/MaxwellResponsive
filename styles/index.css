@@ -617,6 +617,8 @@ canvas {
     margin: 0;
     padding: 20px 0 0 0;
     color: #61be7b;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 .team-social-media i {
