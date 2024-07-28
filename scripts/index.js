@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Define the count values
-    var countValues = [1000, 14, 300, 8]; // Add more values if needed
+    var countValues = [1000, 10, 100, 7]; // Add more values if needed
 
     // Loop through each count-item and initiate the animation
     countValues.forEach(function (value, index) {
