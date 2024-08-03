@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxwell OS</title>
     <script src="https://kit.fontawesome.com/36261d1080.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/erp.css">
+    <link rel="stylesheet" href="./styles/career.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -19,7 +19,8 @@
 
     <script type="text/javascript">
         (function() {
-            emailjs.init("vQXk3pkgQ1MicEtF3"); // Replace with your EmailJS user ID
+            emailjs.init("vQXk3pkgQ1MicEtF3"); 
+            // Replace with your EmailJS user key or public key
         })();
     </script>
 
@@ -64,7 +65,7 @@
                 <li><a href="#servicesDiv">Services</a></li>
                 <li><a href="#chooseUsDiv">Features</a></li>
                 <li><a href="#achievemetsDiv">Product</a></li>
-                <li><a href="#" id="careerPage">Careers</a></li>
+                <li><a href="#teamDiv">Careers</a></li>
                 <li><a href="#contactUs">Contact</a></li>
                 <!-- <i class="fa-solid fa-square-xmark" onclick="closeMenu()"></i> -->
 
@@ -79,172 +80,199 @@
     <main>
         
         <div class="main-container">
-            <div class="erp-main">
-                <div class="erp-details">
-                    <h1>ERP Services</h1>
-                    <!-- <p>Streamline Your Business Operations</p> -->
-                    <p class="erp-description">Enterprise Resource Planning (ERP) systems are integrated software platforms that manage and streamline various business processes within an organization. They provide a centralized framework to collect, store, manage, and interpret data from different business activities. By consolidating all these processes into a single system, ERP solutions enhance efficiency, accuracy, and productivity across the organization.</p>
-                </div>
 
-                <div class="erp-image">
-                    <img src="./images/erp/erptech.jpg" alt="erp-img-error">
-                </div>
+            <div id="chooseUsDiv" class="choose-us-div">
+                    <h1>CAREERS</h1>
+
+                    <div class="choose-us-content">
+                        <div class="left-area">
+
+
+                            <div class="choose-item">
+
+                                <div class="chose-detail">
+                                    <h4>Team Work</h4>
+                                    <p>Teamwork isn't just a buzzword.It's the foundation of our success. 
+                                       Achievements are made through collaboration and collective effort.</p>
+                                </div>
+
+                                <div class="chose-icon">
+                                    <img src="./images/career/teamWork.png"  height="100" width="100" alt="">
+                                </div>
+
+                            </div>
+
+                            <div class="choose-item">
+
+                                <div class="chose-detail">
+                                    <h4>Respect</h4>
+                                    <p>Respect is at the core of our culture. 
+                                        Our commitment to respect extends to our clients, partners, and community. 
+                                    </p>
+                                </div>
+
+                                <div class="chose-icon">
+                                    <img src="./images/career/respect2.jpg"  height="100" width="100" alt="">
+                                </div>
+
+                            </div>
+
+                         
+                           
+                        </div>
+    
+    
+                        <div class="middle-area">
+                            <img src="./images/career/career2.webp" height="400" width="400" alt="">
+                        </div>
+    
+                        <div class="rightt-area">
+
+                            <div class="choose-item">
+                                <div class="chose-icon">
+                                    <img src="./images/career/passion.jpg"  height="80" width="80" alt="">
+                                </div>
+                                <div class="chose-detail">
+                                    <h4>Passion</h4>
+                                    <p>
+                                        Passion drives us to go above and beyond in everything we do. 
+                                        We are passionate about making a difference in all our endeavors.
+                                </div>
+
+                            </div>
+
+
+                            <div class="choose-item">
+                                <div class="chose-icon">
+                                    <img src="./images/career/innovate.png"  height="80" width="80" alt="">
+                                </div>
+                                <div class="chose-detail">
+                                    <h4>Innovation</h4>
+                                    <p>Innovation is the key to staying ahead in today's fast-paced world.
+                                        Dare to be different in all areas of business from each other.</p>
+                                </div>
+
+                                
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="opening-link">
+                        <a href="#careerOpening" class="open-jobs">
+                            Click heree to see current openings..
+                        </a>
+
+                    </div>
+
+
             </div>
 
-            <div class="erp-products">
+            <div class="career-openings" id="careerOpening">
+                <h1>First step to work with us...</h1>
+            
+                <div id="contactUs" class="contact-us-div">            
+                    <div class="contact-details">
+                        <div class="detail-div">
+                            <form action="" id="careerForm">
+                                <div>
+                                    <input type="text" id="name" name="name" placeholder="Name *"  required>
+                                </div>
+                            
+                                <div class="contact-row">
+                                    <div class="email-container">
+                                        <input id="emailId" type="email" name="email" placeholder="Email *" required>
 
-                <div class="product-content">
+                                    </div>
+                                    
+                                    <div class="phone-container">
+                                        <input  id="phoneId" type="tel" name="phone" placeholder="Phone *" required>
+                                        
+                                    </div>
+                                
+                                </div>
 
-                    <div class="product-item" >
-                        <div class="front" style="background-color: #61BE7B;">
-                            <!-- <img src="./images/erp/osiconnobg.png" height="70" width="70" alt=""> -->
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Accounting</h4>
+                                <div class="requirement-div">
+
+                                    <!-- <img src="./images/career/uae.png" alt=""> -->
+
+                                    
+                                    <div class="country-name">
+                                        <!-- <input type="text" id="companyName" name="companyName" placeholder="Company Name" > -->
+                                        <select name="countryPreference" id="countryName" class="country-select" required>
+                                            <option value="" selected disabled>Preferred Country *</option>
+                                            <option value="qatar" data-flag="./images/career/qatar.png">Qatar</option>
+                                            <option value="bahrain" data-flag="./images/career/Bahrain.png">Bahrain</option>
+                                            <option value="kuwait" data-flag="./images/career/kuwait.png">Kuwait</option>
+                                            <option value="muscat" data-flag="./images/career/muscat.png">Muscat</option>
+                                            <option value="saudi-arabia" data-flag="./images/career/saudi-arabia-flag.png">Saudi Arabia</option>
+                                            <option value="uae" data-flag="./images/career/uae.png">United Arab Emirates</option>
+                                        </select>
+                                        
+                                    </div>
+
+                                    <div class="work-experience">
+                                        <select name="experienceYear" id="experienceItem"  required>
+                                            <option value="" selected disabled>Experience *</option>
+                                            <option value="year0">0 years</option>
+                                            <option value="year1">1 years</option>
+                                            <option value="year2">2 years</option>
+                                            <option value="year3">3 years</option>
+                                            <option value="year4">4 years</option>
+                                            <option value="year4">5 years +</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="requirement-div">
+
+                                    
+                                    <div class="job-type-name">
+                                        <!-- <input type="text" id="companyName" name="companyName" placeholder="Company Name" > -->
+                                        <select name="jobTime" id="jobType"  required>
+                                            <option value="" selected disabled>Job type *</option>
+                                            <option value="part-time">Part time</option>
+                                            <option value="full-time">Full time</option>
+                                        </select>
+                                        
+                                    </div>
+
+                                    <div class="requirement-item">
+                                        <select name="jobCategory" id="categoryItem"  required>
+                                            <option value="" selected disabled>Job Category *</option>
+                                            <option value="type1">Technology</option>
+                                            <option value="type2">Sales</option>
+                                            <option value="type3">Digital Marketing</option>
+                                            <option value="type4">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <textarea name="coverLetter" rows="5" placeholder="Cover Letter *" required></textarea>
+
+                                <div class="resume-upload">
+                                    <input type="file" name="resume" id="resume" placeholder="Attach Resume *" accept="application/pdf" required>
+                                </div>
+
+                                <!-- <div class="custom-file-input">
+                                    <input type="file"  class="resume-upload" name="resume" placeholder="Attach Resume *" required>
+                                    <label for="resume">
+                                        <i class="fa-solid fa-cloud-arrow-up"></i> 
+                                        Resume *
+                                    </label>
+                                </div> -->
+                        
+                                <button class="send-button" type="submit">Apply</button>
+                            </form>
                         </div>
 
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/accounting1.webp" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
                     </div>
+                </div>   
 
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Human Resources</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/hr.jpg" height="100%" width="100%" alt="">
-                            </a>                        
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>CRM</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/crm1.avif" height="100%" width="100%" alt="">
-                            </a>                        
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Inventory Management</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/inventory1.webp" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Sales and Purchasing</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/sales.avif" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Project Management</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/projectMgmnt.jpg" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Manufacturing</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/manufacture.jpg" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Healthcare</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/healthcare.cms" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Education</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/education.avif" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Freight Management</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/FreightMgmtsystem.jpg" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Car Repair Management</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/carrepair.jpg" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="front" style="background-color: #61BE7B;">
-                            <img src="./images/erp/OSlogo_black.webp" height="100" width="100" alt="" style="opacity: 0.3;">
-                            <h4>Gym Management</h4>
-                        </div>
-                        <div class="back">
-                            <a href="#contactUs" class="item-link">
-                                <img src="./images/erp/gymmanagement.jpg" height="100%" width="100%" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                   
             </div>
-
+<!-- 
             <div id="contactUs" class="contact-us-div">
                     <h1>Contact Us</h1>
                 
@@ -292,7 +320,7 @@
 
                     </div>
             </div>   
-                
+                 -->
         </div>
 
     </main>
@@ -345,6 +373,7 @@
                                 </li>            
                             </ul>
 
+                            
                             <ul>
                                 <li><h2>About Us</h2></li>
                                 <li>
@@ -353,10 +382,12 @@
                                 <li>
                                     <a>Personal Setup</a>
                                 </li>
-                        
+                              
+                              
+                                
 
                             </ul>
-
+            
                             <ul>
                                 <li><h2>Help Center</h2></li>
                                 <li>
@@ -380,6 +411,7 @@
                                 </li>
             
                             </ul>
+            
             
                         </div>
                     
@@ -413,7 +445,7 @@
     
 
 
-    <script src="./scripts/erp.js"></script>
+    <script src="./scripts/career.js"></script>
 
 
 </body>
