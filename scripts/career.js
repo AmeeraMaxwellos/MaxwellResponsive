@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.querySelector('.main-nav');
     const navLinks = document.querySelectorAll('.main-nav a');
-    const productLink = document.querySelectorAll('.item-link');
+    const openJobs = document.querySelector('.open-jobs');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
@@ -31,39 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    productLink.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            smoothScroll(targetId);
-        });
+    openJobs.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        smoothScroll(targetId);
     });
+
+ 
 
 });
 
 
 // top-nav and main-nav scroll End
-
-
-
-//telephone country-code starts
-
-document.addEventListener('DOMContentLoaded', function() {
-    var input2 = document.querySelector("#phoneId");
-    window.intlTelInput(input2, {
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' } })
-                .then(response => response.json())
-                .then(data => callback(data.country))
-                .catch(() => callback('us'));
-        },
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-    });         
-           
-});
-
-//telephone country-code ends
 
 
 // stay connected for newslettter starts 
@@ -110,13 +89,16 @@ $(document).ready(function() {
     });
 });
 
+
+
 // stay connected for newslettter ends
+
+
 
 
 //send details from CONTACT FORM to email starts 
 
 
- 
     $(document).ready(function() {
 
     //telephone country-code starts
@@ -136,10 +118,9 @@ $(document).ready(function() {
 
     //telephone country-code ends
 
-        $('#contactForm').submit(function(event) {
+        $('#careerForm').submit(function(event) {
             event.preventDefault(); // Prevent the default form submission
 
-            
             // Validate the phone number
             if (!iti.isValidNumber()) {
                 alert('Please enter a valid phone number.');
@@ -151,44 +132,66 @@ $(document).ready(function() {
                 email: $('#emailId').val(),
                 // phone: $('#phoneId').val(),
                 phone: iti.getNumber(),
-                companyName: $('#companyName').val(),
-                requirementType: $('#requirementItem option:selected').text(),
-                subject: $('input[name="subject"]').val(),
-                message: $('textarea[name="message"]').val()
+                countryPreference: $('#countryName option:selected').text(),
+                experienceYear: $('#experienceItem option:selected').text(),
+                jobTime: $('#jobType option:selected').text(),
+                jobCategory: $('#categoryItem option:selected').text(),
+                coverLetter: $('textarea[name="coverLetter"]').val(),
             };
+    
+            var emailSubject = formData.jobCategory + " - " + formData.countryPreference;
+    
+            // Get the attached resume file
+            var resumeFile = $('input[name="resume"]')[0].files[0];
+    
+            // Function to convert file to Base64
+            function getBase64(file, callback) {
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function() {
+                    callback(reader.result);
+                };
+                reader.onerror = function(error) {
+                    console.log('Error: ', error);
+                };
+            }
+    
+            // Convert resume file to Base64 and send email
+            if (resumeFile) {
+                getBase64(resumeFile, function(base64File) {
+                    var templateParams = {
+                        name: formData.name,
+                        email: formData.email,
+                        phone: formData.phone,
+                        country: formData.countryPreference,
+                        experience: formData.experienceYear,
+                        typeofJob: formData.jobTime,
+                        categoryofJob: formData.jobCategory,
+                        subject: emailSubject,
+                        coverDesc: formData.coverLetter,
+                        resume: base64File // Add the Base64 file content
+                    };
+                    console.log('Base64 File:', base64File);
 
-            var emailSubject = formData.subject + " - " + formData.requirementType;
-
-            var templateParams = {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                company_name: formData.companyName,
-                requirement_type: formData.requirementType,
-                subject: emailSubject,
-                message: formData.message
-            };
-
-            console.log("Sending email with params:", templateParams);
-
-            emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
-                .then(function(response) {
-                    console.log('Email sent successfully:', response);
-                    alert('Your message has been sent successfully!');
-                }, function(error) {
-                    console.error('Failed to send email:', error);
-                    alert('There was an error sending your message.');
+                    console.log("Sending email with params:", templateParams);
+    
+                    emailjs.send('service_8k4q3er', 'template_o207o8p', templateParams)
+                        .then(function(response) {
+                            console.log('Email sent successfully:', response);
+                            alert('Your message has been sent successfully!');
+                        }, function(error) {
+                            console.error('Failed to send email:', error);
+                            alert('There was an error sending your message.');
+                        });
                 });
+            } else {
+                alert('Please attach your resume.');
+            }
         });
     });
 
 
-
-    //send details from CONTACT FORM to email ends 
-
-
-    //redirecting to HOME page starts
-
+    
     const ids = ["main-logo", "homePage"];
 
         ids.forEach(function(id) {
@@ -199,9 +202,6 @@ $(document).ready(function() {
     
 
     //redirecting to HOME page ends
-
-
-
 
     
     var sideMenu = document.getElementById('side-menu');
@@ -223,14 +223,24 @@ $(document).ready(function() {
         item.addEventListener('click', closeMenu);
     });
 
-    
+
+    //country-flag in preferred country selection starts
+    const selectElement = document.getElementById('countryName');
+
+    selectElement.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        const flagUrl = selectedOption.getAttribute('data-flag');
+        this.style.backgroundImage = `url(${flagUrl})`;
+    });
+
+    //country-flag in preferred country selection ends
 
 
-     document.getElementById("erpNext").addEventListener("click", function() {
-          window.location.href = "erp.html";
-        });
+    document.getElementById("erpNext").addEventListener("click", function() {
+        window.location.href = "erp.html";
+      });
 
-         
+       
     document.getElementById("careerPage").addEventListener("click", function() {
         window.location.href = "career.html";
       });
