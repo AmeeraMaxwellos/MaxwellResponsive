@@ -44,20 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //telephone country-code starts
 
-document.addEventListener('DOMContentLoaded', function() {
-    var input2 = document.querySelector("#phoneId");
-    window.intlTelInput(input2, {
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' } })
-                .then(response => response.json())
-                .then(data => callback(data.country))
-                .catch(() => callback('us'));
-        },
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-    });         
+// document.addEventListener('DOMContentLoaded', function() {
+//     var input2 = document.querySelector("#phoneId");
+//     window.intlTelInput(input2, {
+//         initialCountry: "auto",
+//         geoIpLookup: function(callback) {
+//             fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' } })
+//                 .then(response => response.json())
+//                 .then(data => callback(data.country))
+//                 .catch(() => callback('us'));
+//         },
+//         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+//     });         
            
-});
+// });
 
 //telephone country-code ends
 
@@ -190,6 +190,79 @@ $(document).ready(function() {
 // stay connected for newslettter ends
 
 
+//send details from CONTACT FORM to email starts 
+
+ 
+$(document).ready(function() {
+
+    //telephone country-code starts
+
+
+    var input = document.querySelector("#phoneId");
+    var iti = window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: function(callback) {
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "us";
+                callback(countryCode);
+            });
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    });
+
+    //telephone country-code ends
+
+    $('#contactForm').submit(function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        
+            // Validate the phone number
+            if (!iti.isValidNumber()) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+
+        var formData = {
+            name: $('#name').val(),
+            email: $('#emailId').val(),
+            // phone: $('#phoneId').val(),
+            phone: iti.getNumber(),
+            companyName: $('#companyName').val(),
+            requirementType: $('#requirementItem option:selected').text(),
+            subject: $('input[name="subject"]').val(),
+            message: $('textarea[name="message"]').val()
+        };
+
+        var emailSubject = formData.subject + " - " + formData.requirementType;
+
+        var templateParams = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company_name: formData.companyName,
+            requirement_type: formData.requirementType,
+            subject: emailSubject,
+            message: formData.message
+        };
+
+        console.log("Sending email with params:", templateParams);
+
+        emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                alert('Your message has been sent successfully!');
+            }, function(error) {
+                console.error('Failed to send email:', error);
+                alert('There was an error sending your message.');
+            });
+    });
+});
+
+
+//send details from CONTACT FORM to email ends
+
+
+//Media query for Navbar starts
 
     var sideMenu = document.getElementById('side-menu');
 
@@ -205,7 +278,18 @@ $(document).ready(function() {
         document.getElementById('side-menu').style.right = '-250px';
     }
 
-    // Add event listener to each <li> element
+    // Add event listener to each <li> element to hide menubar on click
     document.querySelectorAll('#side-menu li').forEach(item => {
         item.addEventListener('click', closeMenu);
     });
+
+//Media query for Navbar ends
+
+
+  
+    document.getElementById("careerPage").addEventListener("click", function() {
+        window.location.href = "career.html";
+      });
+    
+    
+

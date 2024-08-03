@@ -36,7 +36,7 @@ h1 {
 
 }
 
-nav .fa-solid{
+nav .fa-bars{
     display: none;
     color: black;
 
@@ -256,6 +256,8 @@ textarea:focus {
 .logo img {
     height: 40%;
     width: 40%;
+    cursor: pointer;
+
 }
 
 /* Header Ends */
@@ -684,8 +686,14 @@ textarea:focus {
     margin: 10px;
     font-size: 16px;
     line-height: 1.6;
+    cursor: pointer;
 }
 
+.more-details ul li a {
+    text-decoration: none;
+    color: black;
+
+}
 .footer-icons {
     margin: 30px 0 0 0;
     display: flex;
@@ -737,7 +745,7 @@ textarea:focus {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
 
     /* Navbar media query starts */
@@ -1117,16 +1125,17 @@ textarea:focus {
 @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
     
-    .erp-div{
+    .main-container{
         
-        margin-top: 20%;
+        margin-top: 5%;
     }
-        
+      
+    
             
 }
 
 
-@media (min-width: 600px) and (max-width: 900px) 
+@media (min-width: 600px) and (max-width: 900px)
 
 
 {

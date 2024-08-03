@@ -203,6 +203,7 @@ nav .fa-bars{
 .logo img {
     height: 40%;
     width: 40%;
+    cursor: pointer;
 }
 
 
@@ -839,6 +840,14 @@ canvas {
     margin: 10px;
     font-size: 16px;
     line-height: 1.6;
+    cursor: pointer;
+}
+
+
+.more-details ul li a {
+    text-decoration: none;
+    color: black;
+
 }
 
 .footer-icons {
@@ -899,7 +908,7 @@ canvas {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
 /* Navbar media query starts */
 

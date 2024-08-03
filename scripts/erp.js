@@ -113,17 +113,44 @@ $(document).ready(function() {
 // stay connected for newslettter ends
 
 
-    //send details from CONTACT FORM to email starts 
+//send details from CONTACT FORM to email starts 
+
 
  
     $(document).ready(function() {
+
+    //telephone country-code starts
+
+
+        var input = document.querySelector("#phoneId");
+        var iti = window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "us";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+    //telephone country-code ends
+
         $('#contactForm').submit(function(event) {
             event.preventDefault(); // Prevent the default form submission
+
+            
+            // Validate the phone number
+            if (!iti.isValidNumber()) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
 
             var formData = {
                 name: $('#name').val(),
                 email: $('#emailId').val(),
-                phone: $('#phoneId').val(),
+                // phone: $('#phoneId').val(),
+                phone: iti.getNumber(),
                 companyName: $('#companyName').val(),
                 requirementType: $('#requirementItem option:selected').text(),
                 subject: $('input[name="subject"]').val(),
@@ -197,3 +224,13 @@ $(document).ready(function() {
     });
 
     
+
+
+     document.getElementById("erpNext").addEventListener("click", function() {
+          window.location.href = "erp.html";
+        });
+
+         
+    document.getElementById("careerPage").addEventListener("click", function() {
+        window.location.href = "career.html";
+      });
