@@ -618,10 +618,10 @@ nav .fa-bars {
         grid-template-columns: repeat(1, 1fr);
     } */
 
-    
+
     /* career description ends */
 
-/* career opening - send resume FORM starts */
+    /* career opening - send resume FORM starts */
     .career-openings h1 {
         font-size: 30px;
         padding-bottom: 0px 0 0 0;
@@ -630,7 +630,7 @@ nav .fa-bars {
     .contact-us-div {
         margin: 20px 0px 20px 0px;
     }
-    
+
     .contact-us-div h1 {
         margin-bottom: 0px;
     }
@@ -720,13 +720,13 @@ nav .fa-bars {
         /* Adjust this value based on your design */
     }
 
-  .resume-upload {
+    .resume-upload {
         width: 100%;
     }
 
-/* career opening - send resume FORM end */
+    /* career opening - send resume FORM end */
 
-/* footer details starts */
+    /* footer details starts */
 
     .footer-area {
         padding: 0 5%;
@@ -762,7 +762,7 @@ nav .fa-bars {
         display: flex;
         flex-direction: column;
     }
-    
+
     .more-details h2 {
         color: white;
         font-size: 20px;
@@ -792,7 +792,7 @@ nav .fa-bars {
         padding: 0;
     }
 
-/* footer details ends */
+    /* footer details ends */
 
 
 }
@@ -906,10 +906,11 @@ nav .fa-bars {
         height: 390px;
         width: 350px;
     }
-        /* career description ends */
+
+    /* career description ends */
 
 
-/* career opening - send resume FORM starts */
+    /* career opening - send resume FORM starts */
 
     .contact-us-div {
         margin: 50px 20px 20px 20px;
@@ -932,9 +933,9 @@ nav .fa-bars {
         width: 100%;
     }
 
-/* career opening - send resume FORM end */
+    /* career opening - send resume FORM end */
 
-/* footer details starts */
+    /* footer details starts */
     .footer-div {
         margin: 0;
         padding: 0;
