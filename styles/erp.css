@@ -22,77 +22,11 @@ body {
 
 }
 
-
 h1 {
-    font-family: 'Sansation' ;
+    font-family: 'Sansation';
     font-size: 46px;
     letter-spacing: 3px;
 }
-
-.main-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-
-}
-
-nav .fa-bars{
-    display: none;
-    color: black;
-
-}
-
-
-.erp-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 30px auto;
-    color: #61be7b;
-}
-
-.erp-details, .erp-image {
-    flex: 1;
-    padding: 30px;
-    margin: 30px 0 30px 0;
-}
-.erp-image img {
-    max-width: 100%;
-    height: auto;
-    /* animation: zoomFadeIn 2s ease-in-out forwards 2s infinite; */
-}
-
-
-/* Define the keyframes for the zoom-in and fade-in animation */
-@keyframes zoomFadeIn {
-    0% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
-
-.erp-description{
-    color: black;
-    line-height:2rem;
-
-}
-
-.contact-details{
-    background-color: #61be7b;
-}
-
-
-.detail-div{
-    margin:50px 0px;
-}
-
-
 
 form {
     display: flex;
@@ -110,38 +44,36 @@ textarea {
     border-radius: 5px;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-
 select {
     color: #857d7d;
-    padding: 10px 20px;    
+    padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 200px;
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     appearance: none;
-    background-color: white; 
+    background-color: white;
 }
 
 option {
-    color: black; 
+    color: black;
 }
 
 :required:focus:not(:valid) {
     border: 1px solid red;
 
-  }
+}
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: none;
-  border: 2px solid #08ba3a;
+    outline: none;
+    border: 2px solid #08ba3a;
 }
-
 
 /* Header Starts */
 
@@ -166,7 +98,6 @@ textarea:focus {
     transition: top 0.3s, opacity 0.3s, background-color 0.3s;
     border-bottom: 1px solid #61be7b;
 }
-
 
 .top-nav ul,
 .main-nav ul {
@@ -206,11 +137,13 @@ textarea:focus {
     color: #61be7b;
 }
 
-.top-nav ul li i, .footer-icons ul li i {
+.top-nav ul li i,
+.footer-icons ul li i {
     color: black;
 }
 
-.top-nav ul li i:hover, .footer-icons ul li i:hover {
+.top-nav ul li i:hover,
+.footer-icons ul li i:hover {
     color: white;
 }
 
@@ -242,54 +175,73 @@ textarea:focus {
     top: 0;
     opacity: 1;
     background-color: rgb(255, 255, 255);
-  
-   
+
+
 }
 
-.stickys {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+nav .fa-bars {
+    display: none;
+    color: black;
 }
-
 
 .logo img {
     height: 40%;
     width: 40%;
     cursor: pointer;
-
 }
 
 /* Header Ends */
 
+/* ERP main heading and description starts */
+
+.erp-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust as needed */
+    margin: 30px auto;
+    color: #61be7b;
+}
+
+.erp-details,
+.erp-image {
+    flex: 1;
+    padding: 30px;
+    margin: 30px 0 30px 0;
+}
+
+.erp-image img {
+    max-width: 100%;
+    height: auto;
+    /* animation: zoomFadeIn 2s ease-in-out forwards 2s infinite; */
+}
+
+.erp-description {
+    color: black;
+    line-height: 2rem;
+
+}
+
+/* ERP main heading and description ends */
 
 
+/* ERP product list starts */
 
 .erp-products,
 .contact-us-div {
-
     margin: 50px 50px;
 }
-
-.services-div h1,.choose-us-div h1,
-.team-div h1,
-.contact-us-div h1 {
-    text-align: center;
-    color: #61be7b;
-    padding-bottom: 20px 0;
-
-}
-
-
 
 .product-content {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); */
     grid-template-columns: repeat(4, minmax(250px, 300px));
-    row-gap: 10px; 
+    row-gap: 10px;
     gap: 10px;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -311,13 +263,9 @@ textarea:focus {
 
 .product-item h4 {
     font-size: 18px;
-    /* margin-bottom: 5px; */
-    /* color: white; */
     text-align: center;
     margin: 0;
     margin-bottom: 25px;
-
-
 }
 
 .product-item h4,
@@ -325,7 +273,6 @@ textarea:focus {
     position: relative;
     z-index: 2;
     color: #000000;
-    /* margin-top: 20px; */
 }
 
 
@@ -355,7 +302,7 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     /* background-color: yellow; */
-    
+
 }
 
 .product-item:hover .front {
@@ -369,118 +316,9 @@ textarea:focus {
     transform: rotateY(360deg) scale(1.1);
 }
 
+/* ERP product list ends */
 
-
-.choose-us-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.choose-item {
-    margin: 50px;
-    display: flex;
-    width: 300px;
-}
-
-
-.achievements-div
-{
-    background-image: url('../images/bg-new.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: fit-content;
-    width: 100%;
-    position: relative;
-    opacity: 0.9;
-}
-
-.achievement-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 20px;
-    box-sizing: border-box;
-
-}
-
-.count-item {
-    width: 300px;
-}
-
-.count-item h1,
-.plus-icon {
-    display: inline;
-    color: black;
-    color: white;
-    margin: 0 0 0 10px;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
-
-.count-number {
-    text-align: center;
-}
-
-.count-text {
-    background-color: #61be7b;
-    background-color: black;
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin: 10px;
-}
-
-.count-text p {
-    color: white;
-}
-
-
-.count {
-    margin: 0;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-
-.team-details {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 300px));
-    row-gap: 50px;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-
-
-.team-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000000;
-}
-
-.team-item img {
-    border-radius: 80px;
-    display: flex;
-}
-
-.team-item h2 {
-    margin: 0;
-    padding: 20px 0 0 0;
-    color: #61be7b;
-}
-
-.team-social-media i {
-    font-size: 20px;
-    margin: 0 10px;
-    color: black;
-
-}
-
+/* contact us form starts */
 
 .contact-us-div {
     display: flex;
@@ -490,6 +328,12 @@ textarea:focus {
     justify-content: space-between;
 }
 
+.contact-us-div h1 {
+    text-align: center;
+    color: #61be7b;
+    padding-bottom: 20px 0;
+}
+
 .contact-details {
     display: flex;
     flex-wrap: wrap;
@@ -497,36 +341,7 @@ textarea:focus {
     width: 60%;
     margin: 20px 0;
     gap: 80px;
-}
-
-.address-div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     background-color: #61be7b;
-    border-radius: 20px;
-}
-
-.address-div div {
-    margin: 10px;
-}
-
-.address-div div h2 {
-    padding: 0;
-    margin: 0;
-    color: #61be7b;
-    color: white;
-    padding-bottom: 10px;
-}
-
-.address-div div p {
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
 }
 
 .detail-div {
@@ -534,6 +349,7 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px 0px;
 }
 
 .contact-row {
@@ -548,30 +364,32 @@ textarea:focus {
     justify-content: flex-end;
 }
 
-#phoneId,#requirementItem {
+#phoneId,
+#requirementItem {
     width: 225px;
 }
 
-#emailId, #companyName {
+#emailId,
+#companyName {
     width: 265px;
 }
 
-.requirement-div{
+.requirement-div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
 }
 
-.requirement-div > div {
+.requirement-div>div {
     flex: 1;
     margin-right: 10px;
 }
 
-.requirement-div > div:last-child {
+.requirement-div>div:last-child {
     margin-right: 0;
 }
-  
+
 .send-button {
     width: 150px;
     padding: 10px;
@@ -586,29 +404,30 @@ textarea:focus {
 
 }
 
-
-
 .send-button:hover {
     /* background-color: #61be7b; */
     border: 1px solid #08ba3a;
     transform: scale(1.1);
 }
 
+/* contact us form starts */
 
 
-.footer-div{
+/* Footer starts */
+
+.footer-div {
     margin: 120px 50px 0 50px;
     padding: 0;
 }
 
-.footer-details{
+.footer-details {
 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     width: 100%;
     opacity: 1;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -620,7 +439,7 @@ textarea:focus {
 .footer-area {
     padding: 0 10% 0 10%;
     color: black;
-    
+
 }
 
 .footer-area h2 {
@@ -628,11 +447,9 @@ textarea:focus {
     font-size: 25px;
 }
 
-
-
 .connect-us {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 100px;
 }
 
@@ -669,7 +486,7 @@ textarea:focus {
 .submit-message {
     margin-top: 10px;
     display: none;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .more-details {
@@ -692,8 +509,8 @@ textarea:focus {
 .more-details ul li a {
     text-decoration: none;
     color: black;
-
 }
+
 .footer-icons {
     margin: 30px 0 0 0;
     display: flex;
@@ -715,441 +532,23 @@ textarea:focus {
     text-align: center;
 }
 
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Zoom-in animation */
-@keyframes zoomIn {
-    0% { transform: scale(0); }
-    100% { transform: scale(1); }
-}
-
-/* slide-up animation */
-
-@keyframes slideUp {
-
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(170px); 
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(-30px); 
-    }
-
-}
-
+/* Footer ends */
 
 
 @media (max-width: 480px) {
 
 
     /* Navbar media query starts */
-    
-        .main-nav{
-            top: 0;
-        }
-    
-        .top-nav{
-            display: none;
-        }
-    
-        .main-nav .fa-solid{
-            display: block;
-            font-size: 20px;
-            cursor: pointer;
-            padding-right: 10px;
-    
-        }
-    
-        .main-nav ul {
-            background-color: #61be7b;
-            position: fixed;
-            top: 0;
-            /* right: 0; */
-            display: block;
-            right:-250px; /*this will hide menu bar by default*/
-            width: 200px;
-            height: 100vh;
-            z-index: 2;  /*Nav bar in small screens*/
-            transition: right 0.5s;
-        }
-    
-        .main-nav ul li{
-            display: block;
-            padding: 10px;
-            font-size: 30px;
-            margin-top: 10px;
-        }
-    
-        .main-nav ul i {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            margin: 0;
-    
-    
-        }
-    
-        .main-nav ul li a::after{
-    
-            content: ' ';
-            width:  0;
-            height: 3px;
-            background: white;
-            position: absolute;
-            left: 0;
-            bottom: -6px; 
-            transition: 0.5s; 
-        
-        }
-    
-        .main-nav ul li a:hover::after{
-            width: 100%;
-        
-        }
-    
-        .main-nav ul li a:hover{
-            color: white;
-    
-        }
-    
-    
-    /* Navbar media query starts */
-    
-        .erp-head-div{
-            width: 300px;
-            margin: 20% 20% 20% 20%;
-            text-align: center;    
-        
-        }
-    
-        .choose-us-content {
-            flex-direction: column; 
-        }
-    
-        .choose-item {
-            width: 100%; 
-            margin: 50px 0;
-        }
-    
-        .middle-area img {
-            width: 100%; 
-            height: auto;
-        }
-    
-    
-        
-    
-        .contact-us-div{
-            margin:50px 20px 20px 20px;
-    
-        }
-    
-        .contact-details {
-            flex-direction: column-reverse;
-            margin: 10px 0;
-        }
-    
-        .contact-us-div h1 {
-            margin-bottom: 0px;
-        }
-    
-        .address-div, .detail-div {
-            width: 100%;
-        }
-    
-        input, select, textarea {
-            width: 100%;
-            /* padding: 10px; */
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        
-        .requirement-div > div {
-            /* flex: 1; */
-            /* margin-right: 10px; */
-        }
-       
-    
-        .send-button {
-            display: block;
-            margin: 10px auto 0;
-            padding: 10px 20px;
-        }
-    
-        .footer-area {
-            padding: 0 5%;
-        }
-    
-        .footer-details{
-            border-radius:0px;
-    
-        }
-    
-        .connect-us {
-            display: block;
-            text-align: center;
-        }
-    
-        .connect-input{
-            width:auto;
-        }
-    
-        .connect-btn {
-         
-            width: 60px;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    
-        .more-details {
-            display: flex;
-           flex-direction: column;
-        }
-    
-        .more-details ul {
-            margin: 10px 0;
-        }
-        
-        form{
-            width: 90%;
-        }
-    
-        form input, textarea, select, button {
-            margin: 10px 0 0px 0;
-        }
-        
-        .requirement-div div{
-            width: 100%;
-        }
-        .requirement-div{
-            align-items: start;
-        }
-    
-        .contact-details{
-            width: 100%;
-            gap: 20px;
-        }
-    
-        .more-details ul li {
-            width: 100%;
-            margin: 0px 0;
-    
-        }
-    
-        .address-div div{
-            padding:10px;
-        }
-    
-        .contact-row, .requirement-div {
-            display: flex;
-            flex-direction: column;
-            gap: 0px;
-        }
-    
-        .email-container {
-            margin-bottom:10px ;
-        }
-    
-        #phoneId,#requirementItem {
-            width: 100%;
-        }
-        
-        #emailId, #companyName {
-            width: 100%;
-        }
-    
-    
-        .phone-container .iti {
-            width: 100%;
-        }
-        
-        .phone-container .iti__flag-container {
-            padding: 10px 0;
-        }
-        
-        .phone-container input {
-            padding-left: 50px; /* Adjust this value based on your design */
-        }
-    
-        
-        .footer-social-media li {
-            display: inline-block;
-            
-        }
-        
-        .footer-icons ul li i {
-            font-size: 20px;
-            margin: 2px;
-            margin-right: 20px;
-        }
-    
-        .more-details h2 {
-            color: white;
-            font-size: 20px;
-            margin: 0;
-        }
-    
-        .footer-div{
-            margin: 0;
-            padding: 0;
-        }
-       
-        .services-div{
-            margin: 5px 10px;
-        }
-    
-    
-        .service-content, .team-details, .product-content {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    
-        .connect-detail {
-            flex-direction: column;
-            align-items: center;
-            margin-top: 0;
-    
-        }
-    
-        /* .main-bg {
-           
-            background-image: url('../images/mobilebg.jpg');
-           
-        } */
-    
-        .main-bg {
-            justify-content: center; 
-            /* padding-right: 20px;  */
-        }
-    
-        .erp-div {
-            flex-direction: column; 
-            align-items: center; 
-            margin-top: 50px; 
-            /* margin-right: 0;  */
-            padding: 20px; 
-            box-sizing: border-box;
-            width: 100%; 
-        }
-    
-        .erp-logo {
-            width: 100%; 
-            /* max-width: 100px; 
-            max-height: 200px; */
-            margin-bottom: 20px; 
-            /* display: none; */
-        }
-    
-        .erp-desc {
-            padding: 0 20px; 
-            width: 100%; 
-            font-size: 18px; 
-        }
-    
-        .erp-content {
-            /* margin: 20px 0;  */
-            height: auto;
-            width: 100%; 
-            display: none;
-        }
-    
-        .erp-content p {
-            width: 100%; 
-            font-size: 20px; 
-            position: static;
-            /* transform: none;  */
-            /* animation: none;  */
-            color: black;
-            padding: 10px;
-            font-weight: bold;
-            line-height: 1.6rem;
-        }
-    
-        .erp-content p.show {
-            display: block;
-        }
-    
-        .erp-consultation {
-            flex-direction: column; 
-            align-items: center;
-            margin-top: 20px; 
-        }
-    
-        .erp-play-button i {
-            font-size: 24px; 
-            width: 50px; 
-            height: 50px; 
-            margin-bottom: 10px; 
-        }
-    
-        .erp-consultation a {
-            font-size: 14px; 
-            margin-top: 10px; 
-        }
-    
-        /* canvas{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        } */
-        .erp-main {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    
-        .erp-details, .erp-image {
-            margin: 0;
-            /* padding: 10px 0; */
-            padding: 30px 20px;
-        }
-    
-        .erp-details {
-            text-align: left;
-        }
-    
-        .erp-image img {
-            display: block;
-            margin: 0 auto;
-        }
-    
-    
-    }
-   
-    
-@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 
-    
-    .main-container{
-        
-        margin-top: 5%;
-    }
-      
-    
-            
-}
-
-
-@media (min-width: 600px) and (max-width: 900px)
-
-
-{
-    
-    .main-nav{
+    .main-nav {
         top: 0;
     }
 
-    .top-nav{
+    .top-nav {
         display: none;
     }
 
-    .main-nav .fa-solid{
+    .main-nav .fa-solid {
         display: block;
         font-size: 20px;
         cursor: pointer;
@@ -1163,14 +562,16 @@ textarea:focus {
         top: 0;
         /* right: 0; */
         display: block;
-        right:-250px; /*this will hide menu bar by default*/
+        right: -250px;
+        /*this will hide menu bar by default*/
         width: 200px;
         height: 100vh;
-        z-index: 2;  /*Nav bar in small screens*/
+        z-index: 2;
+        /*Nav bar in small screens*/
         transition: right 0.5s;
     }
 
-    .main-nav ul li{
+    .main-nav ul li {
         display: block;
         padding: 10px;
         font-size: 30px;
@@ -1182,63 +583,337 @@ textarea:focus {
         top: 25px;
         right: 25px;
         margin: 0;
-
-
     }
 
-    .main-nav ul li a::after{
+    .main-nav ul li a::after {
 
         content: ' ';
-        width:  0;
+        width: 0;
         height: 3px;
         background: white;
         position: absolute;
         left: 0;
-        bottom: -6px; 
-        transition: 0.5s; 
-    
+        bottom: -6px;
+        transition: 0.5s;
+
     }
 
-    .main-nav ul li a:hover::after{
+    .main-nav ul li a:hover::after {
         width: 100%;
-    
+
     }
 
-    .main-nav ul li a:hover{
+    .main-nav ul li a:hover {
         color: white;
 
     }
 
-    .erp-main{
+    /* Navbar media query ends */
+
+
+    /* ERP main heading and description starts */
+
+    .erp-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .erp-details,
+    .erp-image {
+        margin: 0;
+        /* padding: 10px 0; */
+        padding: 30px 20px;
+    }
+
+    .erp-details {
+        text-align: left;
+    }
+
+
+    .erp-image img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ERP main heading and description ends */
+
+
+    /* ERP product list starts */
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ERP product list ends */
+
+    /* contact us form starts */
+
+    .contact-us-div {
+        margin: 50px 20px 20px 20px;
+
+    }
+
+    .contact-details {
+        flex-direction: column-reverse;
+        margin: 10px 0;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contact-us-div h1 {
+        margin-bottom: 0px;
+    }
+
+    .detail-div {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form input,
+    textarea,
+    select,
+    button {
+        margin: 10px 0 0px 0;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        /* padding: 10px; */
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .requirement-div div {
+        width: 100%;
+    }
+
+    .requirement-div {
+        align-items: start;
+    }
+
+    .contact-row,
+    .requirement-div {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .email-container {
+        margin-bottom: 10px;
+    }
+
+    #phoneId,
+    #requirementItem {
+        width: 100%;
+    }
+
+    #emailId,
+    #companyName {
+        width: 100%;
+    }
+
+    .phone-container .iti {
+        width: 100%;
+    }
+
+    .phone-container .iti__flag-container {
+        padding: 10px 0;
+    }
+
+    .phone-container input {
+        padding-left: 50px;
+        /* Adjust this value based on your design */
+    }
+
+    .send-button {
+        display: block;
+        margin: 10px auto 0;
+        padding: 10px 20px;
+    }
+
+    /* contact us form ends */
+
+    /* Footer details starts */
+    .footer-area {
+        padding: 0 5%;
+    }
+
+    .footer-details {
+        border-radius: 0px;
+
+    }
+
+    .connect-detail {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .more-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .more-details ul {
+        margin: 10px 0;
+    }
+
+    .more-details ul li {
+        width: 100%;
+        margin: 0px 0;
+    }
+
+    .more-details h2 {
+        color: white;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .connect-us {
+        display: block;
+        text-align: center;
+    }
+
+    .connect-input {
+        width: auto;
+    }
+
+    .connect-btn {
+        width: 60px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .footer-social-media li {
+        display: inline-block;
+
+    }
+
+    .footer-icons ul li i {
+        font-size: 20px;
+        margin: 2px;
+        margin-right: 20px;
+    }
+
+    .footer-div {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+/* Footer details end */
+
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+
+    .main-container {
+
+        margin-top: 5%;
+    }
+
+
+
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .main-nav {
+        top: 0;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
+    .main-nav .fa-solid {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        padding-right: 10px;
+
+    }
+
+    .main-nav ul {
+        background-color: #61be7b;
+        position: fixed;
+        top: 0;
+        /* right: 0; */
+        display: block;
+        right: -250px;
+        width: 200px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    .main-nav ul li {
+        display: block;
+        padding: 10px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .main-nav ul i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        margin: 0;
+    }
+
+    .main-nav ul li a::after {
+
+        content: ' ';
+        width: 0;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+
+    }
+
+    .main-nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    .main-nav ul li a:hover {
+        color: white;
+    }
+
+    .erp-main {
         margin-top: 100px;
     }
 
-    
     .erp-div {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items on smaller screens */
-        margin-top: 150px; /* Adjusted margin for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
         /* margin-right: 0;  */
-        padding: 20px; /* Added padding for spacing */
+        padding: 20px;
         box-sizing: border-box;
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
 
     .erp-logo {
-        width: 100%; 
-        /* max-width: 100px; 
-        max-height: 200px; */
-        margin-bottom: 20px; 
-        /* display: none; */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .erp-desc {
-        padding: 0 20px; 
-        width: 100%; /* Full width on smaller screens */
-        font-size: 18px; 
+        padding: 0 20px;
+        width: 100%;
+        font-size: 18px;
     }
 
-    .erp-details, .erp-image {
+    .erp-details,
+    .erp-image {
         flex: 1;
         padding: 10px 30px 0 30px;
         margin: 30px 0 0px 0;
@@ -1249,64 +924,35 @@ textarea:focus {
     }
 
     .product-item {
-        width:auto;
+        width: auto;
     }
 
-    .service-content{
-        grid-template-columns: repeat(2, 1fr);
+    .contact-us-div {
+        margin: 50px 20px 20px 20px;
     }
 
-    .team-details {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .choose-item{
-        margin: 50px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-    }
-
-    .middle-area img{
-        height: 390px;
-        width: 350px;
-    }
-
-    .contact-us-div{
-        margin:50px 20px 20px 20px;
-
-    }
     .contact-us-div h1 {
         margin-bottom: 10px;
     }
-    .address-div div {
-        margin: 20px 0;
-    }
-    .address-div, .detail-div {
-        width: 100%;
-    }
-    
-
-    .footer-div{
-        margin: 0;
-        padding: 0;
-    }
-
 
     .contact-details {
         flex-direction: column-reverse;
         margin: 10px 0;
         width: 100%;
         gap: 20px;
-
-
     }
 
+    .detail-div {
+        width: 100%;
+    }
 
+    .footer-div {
+        margin: 0;
+        padding: 0;
+    }
 
-    .footer-details{
-        border-radius:0px;
-
+    .footer-details {
+        border-radius: 0px;
     }
 
     .connect-us {
@@ -1314,8 +960,8 @@ textarea:focus {
         text-align: center;
     }
 
-    .connect-input{
-        width:auto;
+    .connect-input {
+        width: auto;
     }
 
     .connect-btn {
@@ -1325,4 +971,3 @@ textarea:focus {
     }
 
 }
-
