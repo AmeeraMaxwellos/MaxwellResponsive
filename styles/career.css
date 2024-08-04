@@ -805,6 +805,8 @@ nav .fa-bars {
 /* @media (min-width: 769px) and (max-width: 1200px)  */
 @media (min-width: 600px) and (max-width: 900px) {
 
+    /* Header Navbar media query starts */
+
     .main-nav {
         top: 0;
     }
@@ -831,7 +833,6 @@ nav .fa-bars {
         width: 200px;
         height: 100vh;
         z-index: 2;
-        /*Nav bar in small screens*/
         transition: right 0.5s;
     }
 
@@ -874,52 +875,14 @@ nav .fa-bars {
 
     }
 
+    /* Header Navbar media query Ends */
 
-    .erp-div {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        /* Center items on smaller screens */
-        margin-top: 150px;
-        /* Adjusted margin for smaller screens */
-        /* margin-right: 0;  */
-        padding: 20px;
-        /* Added padding for spacing */
-        box-sizing: border-box;
-        width: 100%;
-        /* Full width on smaller screens */
-    }
 
-    .erp-logo {
-        width: 100%;
-        /* max-width: 100px; 
-        max-height: 200px; */
-        margin-bottom: 20px;
-        /* display: none; */
-    }
-
-    .erp-desc {
-        padding: 0 20px;
-        width: 100%;
-        /* Full width on smaller screens */
-        font-size: 18px;
-    }
-
-    .service-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .team-details {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    /* career description starts */
 
     .career-desc-div {
-
         margin: 100px 50px;
     }
-
-
 
     .career-desc-div h1 {
         padding: 0;
@@ -938,6 +901,10 @@ nav .fa-bars {
         height: 390px;
         width: 350px;
     }
+        /* career description ends */
+
+
+/* career opening - send resume FORM starts */
 
     .contact-us-div {
         margin: 50px 20px 20px 20px;
@@ -948,42 +915,25 @@ nav .fa-bars {
         margin-bottom: 10px;
     }
 
-    .address-div div {
-        margin: 20px 0;
-    }
-
-    .address-div,
-    .details-form {
-        width: 100%;
-    }
-
-
-    .footer-div {
-        margin: 0;
-        padding: 0;
-    }
-
-
     .contact-details {
         flex-direction: column-reverse;
         margin: 10px 0;
         width: 100%;
         gap: 20px;
-
-
-    }
-
-    .product-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product-item {
-        width: auto;
     }
 
 
+    .details-form {
+        width: 100%;
+    }
 
+/* career opening - send resume FORM end */
 
+/* footer details starts */
+    .footer-div {
+        margin: 0;
+        padding: 0;
+    }
 
     .footer-details {
         border-radius: 0px;
@@ -1005,19 +955,7 @@ nav .fa-bars {
         margin-top: 5px;
     }
 
-}
-
-
-
-
-
-@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-
-
-    /* .chooseUsDiv{
-        
-        margin-top: 20%;
-    } */
+    /* footer details end */
 
 
 }
