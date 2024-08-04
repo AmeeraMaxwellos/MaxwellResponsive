@@ -192,13 +192,6 @@ nav .fa-bars{
 
 }
 
-/* 
-.stickys {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-} */
-
 
 .logo img {
     height: 40%;
@@ -360,7 +353,7 @@ canvas {
 
 
 .services-div h1{
-    margin: 0px 0 50px 0;
+    margin: 0px 0 30px 0;
 }
 
 .service-content {
@@ -391,9 +384,6 @@ canvas {
 }
 
 
-
-
-
 .service-item::before {
     content: '';
     position: absolute;
@@ -404,7 +394,6 @@ canvas {
     background-color: #61be7b;
     z-index: 1;
     transition: left 0.3s ease-in-out;
-
 }
 
 
@@ -1177,15 +1166,7 @@ canvas {
 
 
 
-
-    /* .main-bg {
-       
-        background-image: url('../images/mobilebg.jpg');
-       
-    } */
-
     .main-bg {
-        /* background-image: url('../images/mobilebg.jpg'); */
         min-height: 100vh;
         min-width: 100px; /*remove if not working*/
         justify-content: center; 
@@ -1197,13 +1178,13 @@ canvas {
     }
 
     .erp-div {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items on smaller screens */
-        margin-top: 50px; /* Adjusted margin for smaller screens */
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 50px; 
         /* margin-right: 0;  */
-        padding: 20px; /* Added padding for spacing */
+        padding: 20px; 
         box-sizing: border-box;
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
 
     .erp-logo {
@@ -1216,7 +1197,7 @@ canvas {
 
     .erp-desc {
         padding: 0 20px; 
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
         font-size: 18px; 
     }
 
@@ -1228,8 +1209,8 @@ canvas {
     }
 
     .erp-content p {
-        width: 100%; /* Full width on smaller screens */
-        font-size: 20px; /* Adjusted font size for smaller screens */
+        width: 100%; 
+        font-size: 20px; 
         position: static;
         /* transform: none;  */
         /* animation: none;  */
@@ -1244,21 +1225,21 @@ canvas {
     }
 
     .erp-consultation {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         align-items: center;
-        margin-top: 20px; /* Adjusted margin for smaller screens */
+        margin-top: 20px; 
     }
 
     .erp-play-button i {
-        font-size: 24px; /* Adjusted font size for smaller screens */
-        width: 50px; /* Adjusted size for smaller screens */
-        height: 50px; /* Adjusted size for smaller screens */
-        margin-bottom: 10px; /* Added bottom margin for spacing */
+        font-size: 24px; 
+        width: 50px; 
+        height: 50px; 
+        margin-bottom: 10px; 
     }
 
     .erp-consultation a {
-        font-size: 14px; /* Adjusted font size for smaller screens */
-        margin-top: 10px; /* Added top margin for spacing */
+        font-size: 14px; 
+        margin-top: 10px; 
     }
 /* 
     canvas{

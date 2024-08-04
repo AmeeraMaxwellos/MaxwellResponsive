@@ -662,6 +662,18 @@ textarea:focus {
     width: 225px;
 }
 
+.country-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; 
+}
 
 .requirement-div{
     display: flex;
@@ -1477,15 +1489,3 @@ textarea:focus {
 
 
 
-.country-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 200px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    padding-left: 40px; 
-}

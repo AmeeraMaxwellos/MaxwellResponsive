@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
 // top-nav and main-nav scroll End
 
 
@@ -89,21 +88,15 @@ $(document).ready(function() {
     });
 });
 
-
-
 // stay connected for newslettter ends
-
-
 
 
 //send details from CONTACT FORM to email starts 
 
-
     $(document).ready(function() {
 
-    //telephone country-code starts
-
-
+        //telephone country-code starts
+        
         var input = document.querySelector("#phoneId");
         var iti = window.intlTelInput(input, {
             initialCountry: "auto",
@@ -116,7 +109,7 @@ $(document).ready(function() {
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
 
-    //telephone country-code ends
+        //telephone country-code ends
 
         $('#careerForm').submit(function(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -191,8 +184,12 @@ $(document).ready(function() {
     });
 
 
-    
-    const ids = ["main-logo", "homePage"];
+//send details from CONTACT FORM to email ends 
+
+
+    //redirecting to HOME page starts
+
+        const ids = ["main-logo", "homePage"];
 
         ids.forEach(function(id) {
         document.getElementById(id).addEventListener("click", function() {
@@ -204,6 +201,7 @@ $(document).ready(function() {
     //redirecting to HOME page ends
 
     
+    //Navbar side menu for smaller screens starts
     var sideMenu = document.getElementById('side-menu');
 
     function openMenu(){
@@ -218,14 +216,22 @@ $(document).ready(function() {
         document.getElementById('side-menu').style.right = '-250px';
     }
 
-    // Add event listener to each <li> element
+    // Add event listener to each <li> element in small screens
     document.querySelectorAll('#side-menu li').forEach(item => {
         item.addEventListener('click', closeMenu);
     });
 
 
+    //Navbar side menu for smaller screens ends
+
+
     //country-flag in preferred country selection starts
+
     const selectElement = document.getElementById('countryName');
+
+    const initialFlagUrl = selectElement.options[selectElement.selectedIndex].getAttribute('data-flag');
+    selectElement.style.backgroundImage = `url(${initialFlagUrl})`;
+
 
     selectElement.addEventListener('change', function() {
         const selectedOption = this.options[this.selectedIndex];
