@@ -1132,9 +1132,12 @@ canvas {
         
     }
     
+  
+
     .footer-icons ul li i {
-        font-size: 14px;
+        font-size: 20px;
         margin: 2px;
+        margin-right: 20px;
     }
 
     .more-details h2 {
