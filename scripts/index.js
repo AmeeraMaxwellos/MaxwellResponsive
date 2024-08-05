@@ -38,29 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 // top-nav and main-nav scroll End
-
-//telephone country-code starts
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var input2 = document.querySelector("#phoneId");
-//     window.intlTelInput(input2, {
-//         initialCountry: "auto",
-//         geoIpLookup: function(callback) {
-//             fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' } })
-//                 .then(response => response.json())
-//                 .then(data => callback(data.country))
-//                 .catch(() => callback('us'));
-//         },
-//         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-//     });         
-           
-// });
-
-//telephone country-code ends
-
 
 //Achievement count incrementor starts
 
@@ -191,7 +169,6 @@ $(document).ready(function() {
 
 
 //send details from CONTACT FORM to email starts 
-
  
 $(document).ready(function() {
 
@@ -258,20 +235,17 @@ $(document).ready(function() {
     });
 });
 
-
 //send details from CONTACT FORM to email ends
 
 
-//Media query for Navbar starts
+//Media query js code for Navbar starts
 
     var sideMenu = document.getElementById('side-menu');
 
     function openMenu(){
         console.log('opentab')
         sideMenu.style.right= '-50px';
-
     }
-
 
     function closeMenu(){
         console.log('close tab');
@@ -283,13 +257,14 @@ $(document).ready(function() {
         item.addEventListener('click', closeMenu);
     });
 
-//Media query for Navbar ends
+//Media query  js code for Navbar ends
 
 
-  
+// Redirecting to different pages starts
+
     document.getElementById("careerPage").addEventListener("click", function() {
         window.location.href = "career.html";
       });
     
-    
+//   Redirecting to different pages ends
 
