@@ -261,8 +261,8 @@ document.getElementById("erpNext").addEventListener("click", function () {
 });
 
 
-document.getElementById("careerPage").addEventListener("click", function () {
-    window.location.href = "career.html";
-});
+// document.getElementById("careerPage").addEventListener("click", function () {
+//     window.location.href = "career.html";
+// });
 
 //redirecting to different pages ends
