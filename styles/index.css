@@ -1074,6 +1074,18 @@ canvas {
         margin: 50px 0;
     }
 
+    /* .choose-item {
+        flex-direction: column;
+    }
+     */
+    .detail-order {
+        order: 2;
+    }
+    
+    .icon-order {
+        order: 1;
+    }
+
     .middle-area img {
         width: 100%;
         height: auto;
