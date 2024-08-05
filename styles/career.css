@@ -603,10 +603,21 @@ nav .fa-bars {
         margin: 30px 0;
     }
 
+    .detail-order {
+        order: 2;
+    }
+    
+    .icon-order {
+        order: 1;
+    }
+
+
     .middle-area img {
         width: 100%;
         height: auto;
     }
+
+
 
 
     /* .career-desc-left{
