@@ -823,6 +823,7 @@ nav .fa-bars {
 
 
 @media (min-width: 600px) and (max-width: 900px) {
+    
     .main-nav {
         top: 0;
     }
