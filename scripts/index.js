@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             smoothScroll(targetId);
         });
     });
 
-    consultationLink.addEventListener('click', function(event) {
+    consultationLink.addEventListener('click', function (event) {
         event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         smoothScroll(targetId);
@@ -87,12 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //ERP contents animation starts
 
-$(document).ready(function(){
+$(document).ready(function () {
     let paragraphs = $(".erp-content p");
     let index = 0;
 
     function showParagraph() {
-        $(paragraphs[index]).css('display', 'block').hide().fadeIn(500).delay(500).fadeOut(500, function() {
+        $(paragraphs[index]).css('display', 'block').hide().fadeIn(500).delay(500).fadeOut(500, function () {
             $(this).css('display', 'none'); // Ensure the element is hidden after fading out
             index = (index + 1) % paragraphs.length;
             showParagraph();
@@ -109,26 +109,26 @@ $(document).ready(function(){
 
 document.addEventListener('DOMContentLoaded', function () {
     particleground(document.getElementById('particles'), {
-      dotColor: '#ffffff',
-      lineColor: '#ffffff'
+        dotColor: '#ffffff',
+        lineColor: '#ffffff'
     });
 
     var intro = document.getElementById('intro');
     intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
-  }, false);
+}, false);
 
- // particle background ends 
+// particle background ends 
 
 
 
 // stay connected for newslettter starts 
 
-$(document).ready(function() {
-    $('.connect-btn').click(function() {
+$(document).ready(function () {
+    $('.connect-btn').click(function () {
         var email = $('.connect-input').val();
         var messageDiv = $('.submit-message');
         var inputField = $('.connect-input');
-        
+
         // Basic email validation regex
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
@@ -140,17 +140,17 @@ $(document).ready(function() {
             $.ajax({
                 url: 'https://script.google.com/macros/s/AKfycbwIbYwwN-MoYMhlci9p_M2VvvnocSG2nvUfT-YuDwJVHpLBi9nnYi9f86kORYZSrurGSw/exec', // Replace with your Web App URL
                 type: 'POST',
-                data: {email: email},
-                success: function(response) {
+                data: { email: email },
+                success: function (response) {
                     messageDiv.text('Success! Thank you for subscribing.').css('color', 'green').fadeIn();
-                    inputField.val(''); 
-                    setTimeout(function() {
+                    inputField.val('');
+                    setTimeout(function () {
                         messageDiv.fadeOut();
                     }, 2000);
                 },
-                error: function() {
+                error: function () {
                     messageDiv.text('Error! There was a problem subscribing.').css('color', 'red').fadeIn();
-                    setTimeout(function() {
+                    setTimeout(function () {
                         messageDiv.fadeOut();
                     }, 2000);
                 }
@@ -158,7 +158,7 @@ $(document).ready(function() {
         } else {
             messageDiv.text('Error! Please enter a valid email address.').css('color', 'red').fadeIn();
             // inputField.css('border', '1px solid red');
-            setTimeout(function() {
+            setTimeout(function () {
                 messageDiv.fadeOut();
             }, 2000);
         }
@@ -169,8 +169,8 @@ $(document).ready(function() {
 
 
 //send details from CONTACT FORM to email starts 
- 
-$(document).ready(function() {
+
+$(document).ready(function () {
 
     //telephone country-code starts
 
@@ -178,8 +178,8 @@ $(document).ready(function() {
     var input = document.querySelector("#phoneId");
     var iti = window.intlTelInput(input, {
         initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        geoIpLookup: function (callback) {
+            $.get("https://ipinfo.io", function () { }, "jsonp").always(function (resp) {
                 var countryCode = (resp && resp.country) ? resp.country : "us";
                 callback(countryCode);
             });
@@ -189,15 +189,15 @@ $(document).ready(function() {
 
     //telephone country-code ends
 
-    $('#contactForm').submit(function(event) {
+    $('#contactForm').submit(function (event) {
         event.preventDefault(); // Prevent the default form submission
 
-        
-            // Validate the phone number
-            if (!iti.isValidNumber()) {
-                alert('Please enter a valid phone number.');
-                return;
-            }
+
+        // Validate the phone number
+        if (!iti.isValidNumber()) {
+            alert('Please enter a valid phone number.');
+            return;
+        }
 
         var formData = {
             name: $('#name').val(),
@@ -225,10 +225,10 @@ $(document).ready(function() {
         console.log("Sending email with params:", templateParams);
 
         emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
-            .then(function(response) {
+            .then(function (response) {
                 console.log('Email sent successfully:', response);
                 alert('Your message has been sent successfully!');
-            }, function(error) {
+            }, function (error) {
                 console.error('Failed to send email:', error);
                 alert('There was an error sending your message.');
             });
@@ -240,31 +240,47 @@ $(document).ready(function() {
 
 //Media query js code for Navbar starts
 
-    var sideMenu = document.getElementById('side-menu');
+var sideMenu = document.getElementById('side-menu');
 
-    function openMenu(){
-        console.log('opentab')
-        sideMenu.style.right= '-50px';
-    }
+function openMenu() {
+    console.log('opentab')
+    sideMenu.style.right = '-50px';
+}
 
-    function closeMenu(){
-        console.log('close tab');
-        document.getElementById('side-menu').style.right = '-250px';
-    }
+function closeMenu() {
+    console.log('close tab');
+    document.getElementById('side-menu').style.right = '-250px';
+}
 
-    // Add event listener to each <li> element to hide menubar on click
+// Add event listener to each <li> element to hide menubar on click
+
+// document.querySelectorAll('#side-menu li').forEach(item => {
+//     item.addEventListener('click', closeMenu);
+// });
+
+// Add event listener to each <li> element , when clicking outside to hide menubar on click
+document.addEventListener('click', function (event) {
+
     document.querySelectorAll('#side-menu li').forEach(item => {
         item.addEventListener('click', closeMenu);
     });
+
+    if (!sideMenu.contains(event.target) && !event.target.matches('.fa-bars')) {
+        closeMenu();
+    }
+});
+
+// Add event listener to each <li> element , when clicking outside to hide menubar on click
+
 
 //Media query  js code for Navbar ends
 
 
 // Redirecting to different pages starts
 
-    document.getElementById("careerPage").addEventListener("click", function() {
-        window.location.href = "career.html";
-      });
-    
+document.getElementById("careerPage").addEventListener("click", function () {
+    window.location.href = "career.html";
+});
+
 //   Redirecting to different pages ends
 

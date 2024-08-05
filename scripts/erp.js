@@ -189,10 +189,24 @@ function closeMenu() {
     document.getElementById('side-menu').style.right = '-250px';
 }
 
-// Add event listener to each <li> element
-document.querySelectorAll('#side-menu li').forEach(item => {
-    item.addEventListener('click', closeMenu);
+
+// Add event listener to each <li> element , when clicking outside to hide menubar on click
+
+
+document.addEventListener('click', function (event) {
+
+    document.querySelectorAll('#side-menu li').forEach(item => {
+        item.addEventListener('click', closeMenu);
+    });
+
+    if (!sideMenu.contains(event.target) && !event.target.matches('.fa-bars')) {
+        closeMenu();
+    }
 });
+
+// Add event listener to each <li> element , when clicking outside to hide menubar on click
+
+
 
 //Navbar side menu for smaller screens ends
 
