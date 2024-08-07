@@ -93,7 +93,6 @@ $(document).ready(function () {
 
 //send details from CONTACT FORM to email starts 
 
-
 $(document).ready(function () {
 
     //telephone country-code starts
@@ -134,6 +133,9 @@ $(document).ready(function () {
 });
 
 
+//send details from CONTACT FORM to email ends 
+
+
 //redirecting to HOME page starts
 
 const ids = ["main-logo", "homePage"];
@@ -150,7 +152,6 @@ ids.forEach(function (id) {
     });
 });
 
-//redirecting to HOME page ends
 //redirecting to HOME page ends
 
 
@@ -170,29 +171,29 @@ function closeMenu() {
 }
 
 
-// Add event listener to each <li> element , when clicking outside to hide menubar on click
+    // Add event listener to each <li> element , when clicking outside to hide menubar on click
 
 
-document.addEventListener('click', function (event) {
+    document.addEventListener('click', function (event) {
 
-    document.querySelectorAll('#side-menu li').forEach(item => {
-        item.addEventListener('click', closeMenu);
+        document.querySelectorAll('#side-menu li').forEach(item => {
+            item.addEventListener('click', closeMenu);
+        });
+
+        if (!sideMenu.contains(event.target) && !event.target.matches('.fa-bars')) {
+            closeMenu();
+        }
     });
 
-    if (!sideMenu.contains(event.target) && !event.target.matches('.fa-bars')) {
-        closeMenu();
-    }
-});
 
-
-// Add event listener to each <li> element , when clicking outside to hide menubar on click
-
+    // Add event listener to each <li> element , when clicking outside to hide menubar on click
 
 
 //Navbar side menu for smaller screens ends
 
 
 //country-flag in preferred country selection starts
+
 const selectElement = document.getElementById('countryName');
 
 const initialFlagUrl = selectElement.options[selectElement.selectedIndex].getAttribute('data-flag');
@@ -206,6 +207,7 @@ selectElement.addEventListener('change', function () {
 });
 
 //country-flag in preferred country selection ends
+
 
 //redirecting to different pages starts
 

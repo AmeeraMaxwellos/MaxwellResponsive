@@ -224,7 +224,7 @@ $(document).ready(function () {
 
         console.log("Sending email with params:", templateParams);
 
-        emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
+        emailjs.send('service_uscvaub', 'template_npp4s38', templateParams)
             .then(function (response) {
                 console.log('Email sent successfully:', response);
                 alert('Your message has been sent successfully!');

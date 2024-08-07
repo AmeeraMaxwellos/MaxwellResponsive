@@ -96,8 +96,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     //telephone country-code starts
-
-
+    
     var input = document.querySelector("#phoneId");
     var iti = window.intlTelInput(input, {
         initialCountry: "auto",
@@ -114,7 +113,6 @@ $(document).ready(function () {
 
     $('#contactForm').submit(function (event) {
         event.preventDefault(); // Prevent the default form submission
-
 
         // Validate the phone number
         if (!iti.isValidNumber()) {
@@ -147,7 +145,7 @@ $(document).ready(function () {
 
         console.log("Sending email with params:", templateParams);
 
-        emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
+        emailjs.send('service_uscvaub', 'template_npp4s38', templateParams)
             .then(function (response) {
                 console.log('Email sent successfully:', response);
                 alert('Your message has been sent successfully!');
@@ -156,6 +154,8 @@ $(document).ready(function () {
                 alert('There was an error sending your message.');
             });
     });
+
+
 });
 
 //send details from CONTACT FORM to email ends 
