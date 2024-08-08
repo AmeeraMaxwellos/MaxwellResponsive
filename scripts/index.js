@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
         lineColor: '#ffffff'
     });
 
-    var intro = document.getElementById('intro');
-    intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
+    // var intro = document.getElementById('intro');
+    // intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 
 // particle background ends 

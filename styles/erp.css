@@ -22,6 +22,11 @@ body {
 
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-family: 'Sansation';
     font-size: 46px;
@@ -98,6 +103,7 @@ textarea:focus {
     transition: top 0.3s, opacity 0.3s, background-color 0.3s;
     border-bottom: 1px solid #61be7b;
 }
+
 
 .top-nav ul,
 .main-nav ul {
@@ -178,6 +184,7 @@ textarea:focus {
 
 
 }
+
 
 nav .fa-bars {
     display: none;

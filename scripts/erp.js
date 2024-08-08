@@ -1,21 +1,80 @@
 // top-nav and main-nav scroll Start
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const mainNav = document.querySelector('.main-nav');
+//     const navLinks = document.querySelectorAll('.main-nav a');
+//     const productLink = document.querySelectorAll('.item-link');
+
+//     window.addEventListener('scroll', () => {
+//         if (window.scrollY > 0) {
+//             mainNav.classList.add('scrolled');
+//         } else {
+//             mainNav.classList.remove('scrolled');
+//         }
+//     });
+
+//     const smoothScroll = (targetId) => {
+//         const targetElement = document.getElementById(targetId);
+//         const offset = mainNav.offsetHeight;
+
+//         window.scrollTo({
+//             top: targetElement.offsetTop - offset,
+//             behavior: 'smooth'
+//         });
+//     };
+
+//     navLinks.forEach(link => {
+//         link.addEventListener('click', function (event) {
+//             event.preventDefault();
+//             const targetId = this.getAttribute('href').substring(1);
+//             smoothScroll(targetId);
+//         });
+//     });
+
+//     productLink.forEach(link => {
+//         link.addEventListener('click', function (event) {
+//             event.preventDefault();
+//             const targetId = this.getAttribute('href').substring(1);
+//             smoothScroll(targetId);
+//         });
+//     });
+
+// });
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    // alert("hi")
     const mainNav = document.querySelector('.main-nav');
     const navLinks = document.querySelectorAll('.main-nav a');
-    const productLink = document.querySelectorAll('.item-link');
+    const productLinks = document.querySelectorAll('.item-link');
 
-    window.addEventListener('scroll', () => {
+    if (!mainNav) {
+        console.warn('Main navigation not found');
+        return; // Check if mainNav exists
+    }
+
+    const updateNavScroll = () => {
         if (window.scrollY > 0) {
             mainNav.classList.add('scrolled');
         } else {
             mainNav.classList.remove('scrolled');
         }
-    });
+    };
+
+    window.addEventListener('scroll', updateNavScroll);
+    updateNavScroll(); // Initial check
 
     const smoothScroll = (targetId) => {
         const targetElement = document.getElementById(targetId);
+
+        if (!targetElement) {
+            console.warn(`Element with ID '${targetId}' not found.`);
+            return;
+        }
+
         const offset = mainNav.offsetHeight;
+        console.log(`Scrolling to ${targetId}, nav height: ${offset}`);
 
         window.scrollTo({
             top: targetElement.offsetTop - offset,
@@ -25,20 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
+            const href = this.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+
             event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             smoothScroll(targetId);
         });
     });
 
-    productLink.forEach(link => {
+    productLinks.forEach(link => {
         link.addEventListener('click', function (event) {
+            const href = this.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+
             event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             smoothScroll(targetId);
         });
     });
-
 });
 
 
