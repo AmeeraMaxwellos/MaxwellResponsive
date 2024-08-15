@@ -386,6 +386,30 @@ nav .fa-bars {
     transform: scale(1.1);
 }
 
+
+#submitMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    /* color: #61be7b; */
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #08ba3a; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* career opening - send resume form ends */
 
 /* footer details starts */

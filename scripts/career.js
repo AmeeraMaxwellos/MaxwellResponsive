@@ -116,21 +116,58 @@ $(document).ready(function () {
 
         // Validate the phone number
         if (!iti.isValidNumber()) {
+            $('#submitMessage').hide(); // Hide the message container if validation fails
             alert('Please enter a valid phone number.');
             return;
         }
 
+        // Show the submit message and loader
+        $('#submitMessage').show();
+        $('#submitText').text('Submitting your application, please wait...');
+        $('#submitText').css('color', '#000000'); // Set initial color (black) for submitting message
+        $('.loader').show(); // Ensure loader is visible
+
+        // Disable the send button
+        $('.send-button').prop('disabled', true);
+
+        // Send email using EmailJS
         emailjs.sendForm('service_uscvaub', 'template_yufkdph', this)
             .then(function (response) {
                 console.log('Email sent successfully:', response);
-                alert('Your message has been sent successfully!');
+                
+                // Hide the loader and update the message
+                $('.loader').hide();
+                $('#submitText').text('Your message has been sent successfully!');
+                $('#submitText').css('color', '#00A000'); // Change text color to green for success
+                
+                // Clear the form
+                // $('#careerForm')[0].reset();
+                
+                // Optionally, reset the international telephone input
+                // iti.setNumber('');
             }, function (error) {
                 console.error('Failed to send email:', error);
-                alert('There was an error sending your message.');
+                
+                // Hide the loader and update the message
+                $('.loader').hide();
+                $('#submitText').text('There was an error sending your message. Please try again.');
+                $('#submitText').css('color', '#FF0000'); // Change text color to red for error
+            })
+            .finally(function () {
+                // Re-enable the send button after the process is complete
+                $('.send-button').prop('disabled', false);
+
+                // Optionally hide the message after some time
+                setTimeout(function() {
+                    $('#submitMessage').hide();
+                }, 1000); // Adjust time as needed
             });
     });
 
 });
+
+
+
 
 
 //send details from CONTACT FORM to email ends 
