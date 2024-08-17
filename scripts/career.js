@@ -150,6 +150,7 @@ $(document).ready(function () {
                 
                 // Optionally, reset the international telephone input
                 iti.setNumber('');
+                iti.setCountry('QA');
 
             }, function (error) {
                 console.error('Failed to send email:', error);
@@ -263,8 +264,6 @@ selectElement.addEventListener('change', updateFlag);
 formElement.addEventListener('reset', function () {
     setTimeout(updateFlag, 0); // Delay to allow the reset to complete
 });
-
-
 
 // To handle form reset or clear
 document.querySelector('form').addEventListener('reset', function () {
