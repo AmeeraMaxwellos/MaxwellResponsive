@@ -341,6 +341,25 @@ nav .fa-bars {
     padding-left: 40px;
 }
 
+.country-name{
+    position: relative;
+}
+
+.flag-class{
+
+    position: absolute;
+    top: 20px;
+
+}
+
+
+#countryFlag {
+    width: 20px;
+    height: 10px;
+    margin-left: 10px;
+    /* vertical-align: middle; */
+}
+
 .requirement-div {
     display: flex;
     align-items: center;

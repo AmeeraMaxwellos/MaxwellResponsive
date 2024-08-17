@@ -130,6 +130,11 @@ $(document).ready(function () {
         // Disable the send button
         $('.send-button').prop('disabled', true);
 
+
+          // Ensure the phone number value is formatted correctly
+          var phoneNumber = iti.getNumber(); // Get the formatted number from the intlTelInput plugin
+          $('#phoneId').val(phoneNumber); 
+  
         // Send email using EmailJS
         emailjs.sendForm('service_uscvaub', 'template_yufkdph', this)
             .then(function (response) {
@@ -141,10 +146,11 @@ $(document).ready(function () {
                 $('#submitText').css('color', '#00A000'); // Change text color to green for success
                 
                 // Clear the form
-                // $('#careerForm')[0].reset();
+                $('#careerForm')[0].reset();
                 
                 // Optionally, reset the international telephone input
-                // iti.setNumber('');
+                iti.setNumber('');
+
             }, function (error) {
                 console.error('Failed to send email:', error);
                 
@@ -165,9 +171,6 @@ $(document).ready(function () {
     });
 
 });
-
-
-
 
 
 //send details from CONTACT FORM to email ends 
@@ -231,20 +234,46 @@ function closeMenu() {
 
 //country-flag in preferred country selection starts
 
+
+
+
 const selectElement = document.getElementById('countryName');
+const flagImage = document.getElementById('countryFlag');
+const formElement = document.querySelector('form'); // Assuming the select is within a form
 
-const initialFlagUrl = selectElement.options[selectElement.selectedIndex].getAttribute('data-flag');
-selectElement.style.backgroundImage = `url(${initialFlagUrl})`;
-
-
-selectElement.addEventListener('change', function () {
-    const selectedOption = this.options[this.selectedIndex];
+function updateFlag() {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
     const flagUrl = selectedOption.getAttribute('data-flag');
-    this.style.backgroundImage = `url(${flagUrl})`;
+
+    if (flagUrl) {
+        flagImage.src = flagUrl;
+        flagImage.style.display = 'inline'; // Show the flag
+    } else {
+        flagImage.style.display = 'none'; // Hide the flag if no country is selected
+    }
+}
+
+// Update the flag on page load
+updateFlag();
+
+// Update the flag on change
+selectElement.addEventListener('change', updateFlag);
+
+// Handle form reset
+formElement.addEventListener('reset', function () {
+    setTimeout(updateFlag, 0); // Delay to allow the reset to complete
 });
 
-//country-flag in preferred country selection ends
 
+
+// To handle form reset or clear
+document.querySelector('form').addEventListener('reset', function () {
+    flagImage.src = '';
+    flagImage.style.display = 'none';
+});
+
+
+//country-flag in preferred country selection ends
 
 //redirecting to different pages starts
 
