@@ -17,6 +17,7 @@
     <script src="./scripts/particle.js"></script>
     <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 
 
     <script type="text/javascript">
@@ -674,13 +675,7 @@
     
     
     <script>
-        // document.getElementById("erpNextPage").addEventListener("click", function() {
-        //   window.location.href = "erp.html";
-        // });
-
-
-
-        
+   
             //redirecting to HOME page starts
 
             const ids = ["erpNext", "erpNextPage"];
@@ -695,53 +690,6 @@
             //redirecting to HOME page ends
 
     </script>
-
-    <!-- <script>
- 
-    $(document).ready(function() {
-            $('#contactForm').submit(function(event) {
-                event.preventDefault(); // Prevent the default form submission
-
-                var formData = {
-                    name: $('#name').val(),
-                    email: $('#emailId').val(),
-                    // phone: $('#phoneId').val(),
-                    phone: iti.getNumber(),
-                    companyName: $('#companyName').val(),
-                    requirementType: $('#requirementItem option:selected').text(),
-                    subject: $('input[name="subject"]').val(),
-                    message: $('textarea[name="message"]').val()
-                };
-
-                var emailSubject = formData.subject + " - " + formData.requirementType;
-
-                var templateParams = {
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    company_name: formData.companyName,
-                    requirement_type: formData.requirementType,
-                    subject: emailSubject,
-                    message: formData.message
-                };
-
-                console.log("Sending email with params:", templateParams);
-
-                emailjs.send('service_n7r5ftg', 'template_mwgby5q', templateParams)
-                    .then(function(response) {
-                        console.log('Email sent successfully:', response);
-                        alert('Your message has been sent successfully!');
-                    }, function(error) {
-                        console.error('Failed to send email:', error);
-                        alert('There was an error sending your message.');
-                    });
-            });
-        });
-   
-   </script> -->
-
-
-
 
     <script src="./scripts/index.js"></script>
 
